@@ -1,0 +1,72 @@
+import React from 'react'
+import styled from 'styled-components'
+import { graphql, StaticQuery, Link } from 'gatsby'
+
+//----------styled---------
+
+const Blog = styled.div`
+    align-content: center;
+    a{
+        text-decoration:none;
+        color: #20cbd4;
+        :hover{
+            color:white;
+        }
+    }
+`
+// const LinkFooter = styled(Link)`
+//     text-decoration:none;
+//     color: #20cbd4;
+//     ${LinkFooter}:hover&{
+//         color:white;
+//     }
+// `
+//--------endStyled
+const FooterContactItem  =() => {
+    return(
+        <StaticQuery  query={ graphql`
+        {
+    wordPress {
+    menus(where: {slug: "footercontact"}) {
+      nodes {
+        name
+        menuItems {
+          nodes {
+            url
+            label
+          }
+        }
+      }
+    }
+  }
+  }
+
+    `} render = {props => {
+        const ShowItem = () => {
+            return(
+                <div>
+                    {props.wordPress.menus.nodes.map(edges => {
+                        return(
+                            edges.menuItems.nodes.map(items=> {
+                                return(
+                                    <Blog>
+                                        <Link> {items.label} </Link>
+                                    </Blog>
+                                )
+                            })
+                        )
+                    })}
+                </div>
+            )
+        }
+
+        return(
+                <div> {ShowItem()} </div>
+            )
+        }} />
+    )
+}
+export default FooterContactItem
+
+
+

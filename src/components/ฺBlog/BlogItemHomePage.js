@@ -23,6 +23,7 @@ const BlogItem = styled.div`
 `
 
 const Block = styled.div`
+    width:250px;
     margin: 30px 0;
     height: 300px;
     padding:5px;

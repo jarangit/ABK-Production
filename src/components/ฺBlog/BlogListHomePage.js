@@ -5,8 +5,8 @@ import BlogItemHomePage from './BlogItemHomePage'
 
 const BlogGrid = styled.div`
 max-width: 1064px;
-display: grid;
-grid-template-columns: auto auto auto auto;
+display:flex;
+flex-wrap:wrap;
 margin: 0 auto;
 grid-gap: 35px;
 overflow: hidden;

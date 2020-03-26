@@ -14,14 +14,6 @@ const Blog = styled.div`
         }
     }
 `
-// const LinkFooter = styled(Link)`
-//     text-decoration:none;
-//     color: #20cbd4;
-//     ${LinkFooter}:hover&{
-//         color:white;
-//     }
-// `
-//--------endStyled
 const FooterContactItem  =() => {
     return(
         <StaticQuery  query={ graphql`

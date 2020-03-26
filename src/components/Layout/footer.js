@@ -26,8 +26,9 @@ const FooterCtn = styled.div`
 
 `
 const FooterItem = styled.div`
-    display: grid;
-    grid-template-columns: 355px 355px auto;
+    /* display: flex; */
+    flex-wrap:wrap;
+    /* justify-content:space-around; */
     max-width:1064px;
     height: auto;
     width: 100%;
@@ -51,13 +52,11 @@ class Footer extends Component {
                   </div>
                   <div>
                       <h2> LOCATION </h2>
-                      <p>บริษัท วัน สามสิบเอ็ด จำกัด (สำนักงานใหญ่)
-อาคารจีเอ็มเอ็ม แกรมมี่ เพลส 50 ถนนสุขุมวิท 21 (อโศก) แขวงคลองเตยเหนือ เขตวัฒนา กรุงเทพมหานครฯ 10110</p>
                   </div>
               </FooterItem>
                 <FooterCopy>
                     <div>
-                        Copyright By <Link href ="#">ABK - ENGINEERING AND MACHINE</Link>
+                        Copyright By <Link href ="#">ABK</Link>
                     </div>
                 </FooterCopy>
             </FooterCtn>

@@ -22,39 +22,63 @@ const Text = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
+    h1{
+        font-size: 3rem;
+    }
+    h2{
+        font-size: 2rem;
+
+    }
+    div{
+        margin: 20px;
+        a{
+            color: white;
+        text-decoration:none;
+        border: 1px solid white;
+        padding: .5rem 1rem;
+        border-radius: .3rem;
+        font-size: 1.25rem;
+        :hover{
+            background: white;
+            color: black;
+            }
+        }
+    }
+  @media all and (max-width: 900px) {
+          top: 30%;
+          h1{
+              font-size: 1rem;
+          }
+          h2{
+              font-size: 1rem;
+          }
+          div{
+                a{
+                padding: 0 10px;
+                font-size: 15px;
+                }
+    }
+  @media all and (max-width: 1024px) {
+          top: 30%;
+          
+    }
 `
-// const LinkSlide = styled(Link)`
-//     color: white;
+
+// const DivLink = styled.div`
+//     margin: 20px;
+//     a{
+//         color: white;
 //     text-decoration:none;
 //     border: 1px solid white;
 //     padding: .5rem 1rem;
 //     border-radius: .3rem;
 //     font-size: 1.25rem;
-//     ${LinkSlide}:hover&{
+//     :hover{
 //         background: white;
 //         color: black;
+//         }
 //     }
-// `   
-
-const H1 = styled.h1`
-    font-size: 3rem;
-`
-
-const DivLink = styled.div`
-    margin: 20px;
-    a{
-        color: white;
-    text-decoration:none;
-    border: 1px solid white;
-    padding: .5rem 1rem;
-    border-radius: .3rem;
-    font-size: 1.25rem;
-    :hover{
-        background: white;
-        color: black;
-    }
-    }
-`
+// `
 class HomePage extends Component {
     render(){
         
@@ -62,9 +86,9 @@ class HomePage extends Component {
            <Layout>
                <SlideHeader/>
                     <Text>
-                        <H1 >WELCOME</H1>
+                        <h1 >WELCOME</h1>
 						<h2>ABK ENGINEERING AND MACHINE</h2>
-						<DivLink><Link to = 'product' >Product</Link></DivLink>
+						<div><Link to = 'product' >Product</Link></div>
                     </Text>
                     <LayoutWrapper>
                         <JustWeb/>

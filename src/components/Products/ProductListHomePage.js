@@ -7,8 +7,8 @@ import ProductItemHomePage from './ProductItemHomePage'
 
 const ProductGrid = styled.div`
 max-width: 1064px;
-display: grid;
-grid-template-columns: auto auto auto;
+display:flex;
+flex-wrap:wrap;
 margin: 20px auto;
 grid-gap: 35px;
 `

@@ -10,28 +10,15 @@ const Img = styled.img`
     max-width: 150px;
     width: 100%;
 `
-
-// const LinkCatName = styled(Link)`
-//     text-decoration: none;
-//     color: black;
-//     ${LinkCatName}:hover&{
-//         color:#17949b;
-//     }
-
-// `
-
 const BlockCartItem = styled.div`
     display:flex;
+    flex-wrap:wrap;
+    align-items:center;
     margin: 10px 0;
     div{
         text-align:center;
         margin: 0 15px;
         padding: 15px;
-            /* border: 1px solid #D5D8DC ; */
-        /* :hover {
-        box-shadow: 0 10px 25px rgba(0,0,0,.2);
-        margin-top:-10px;
-    } */
     button{
             background-color: #17949b;
             border: none;
@@ -42,32 +29,10 @@ const BlockCartItem = styled.div`
             :hover{
             background-color: #42D0D8;
             }
-    }
+        }
     }
     
 `
-// const BlockItem = styled.div`
-//     /* border-radius: 10px; */
-//     text-align:center;
-//     margin: 0 15px;
-//     padding: 15px;
-//     border: 1px solid #D5D8DC ;
-//     ${BlockItem}:hover&{
-//         box-shadow: 0 10px 25px rgba(0,0,0,.2);
-//         margin-top:-10px;
-//     }
-//         button{
-//             background-color: #17949b;
-//             border: none;
-//             padding: 7px;
-//             border-radius: 0.5rem;
-//             margin-top: 20px;
-//             color: white;
-//             :hover{
-//             background-color: #42D0D8;
-//             }
-//     }
-// `
 const Div = styled.div`
     margin: 40px 0;
         a{

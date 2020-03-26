@@ -23,7 +23,7 @@ const Img = styled.img`
 const Block = styled.div`
     border-radius: 10px;
     text-align:center;
-    padding: 15px;
+    margin: 0 10px;
     border: 1px solid #D5D8DC ;
     :hover{
         box-shadow: 0 10px 25px rgba(0,0,0,.2);

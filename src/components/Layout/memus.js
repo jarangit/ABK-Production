@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, {Component, useState} from 'react'
 import { graphql, StaticQuery, Link } from 'gatsby'
 import styled from 'styled-components'
 import Logo from '../../images/logo/logo.png'
@@ -23,20 +23,6 @@ const MenusItem = styled.div`
     background-color: #00181a;
     
 `
-const DivDrop = styled.div`
-    text-decoration:none;
-    display: none;
-    position: absolute;
-    z-index: 1;
-    background:#00181a;
-    a{
-        display:block;
-        padding: 12px 16px;
-        text-decoration: none;
-        text-align: left;
-    }
-`
-
 const LayoutWrapper = styled.div`
     width:1064px;
     margin: 0 auto;
@@ -52,7 +38,20 @@ const UlMain = styled.ul`
     list-style-type: none;
     :hover div{
       display:block;
-    }    
+    }
+     div{
+      text-decoration:none;
+      display: none;
+      position: absolute;
+      z-index: 1;
+      background:#00181a;
+      a{
+          display:block;
+          padding: 12px 16px;
+          text-decoration: none;
+          text-align: left;
+      }
+     }
   }
   a{
       color: #ffff;
@@ -63,11 +62,51 @@ const UlMain = styled.ul`
         color: #20cbd4;
       }
     }
-
+    
     @media all and (max-width: 900px) {
-          li:not(.toggle){
-            display:none;
-          }
+        .toggle{
+          display:block;
+        }  
+        li:not(.toggle){
+        display:none
+        }     
+        
+       &.active{
+              li:not(.toggle){
+              display:block;
+            }     
+            display:block;
+
+            li{
+              div{
+                display:block;
+                position:relative;
+                a{
+                  padding: 0 16px;
+                }
+              }
+            }
+          }                    
+    }
+
+    @media all and  (min-width: 375px){
+      
+      /* &.active{
+              li:not(.toggle){
+              display:block;
+            }     
+            display:block;
+
+            li{
+              div{
+                display:block;
+                position:relative;
+                a{
+                  padding: 0 16px;
+                }
+              }
+            }
+          }    */
     }
 `
  //------EndStyle-----
@@ -104,23 +143,27 @@ class MainMenu extends Component {
   }
 }
 ` } render = { props => {
+  const [ navOpen, setNavOpen ] = useState(false)
   return(
     <MenusItem>
       <LayoutWrapper>
       <div>
-        {/* <Link to="/home"> */}
+        <Link to="/home">
             <LogoImg src={Logo}/> 
-        {/* </Link>     */}
+        </Link>    
       </div>
       <div>
-          <UlMain>
+          <UlMain className = { navOpen ? 'active' : ''}>
+                  <li  className="toggle" onClick = { () => { setNavOpen(!navOpen) } }>
+                    <a to ="#"><i class="fas fa-bars"></i></a>
+                  </li>
               { props.wordPress.menu.menuItems.edges.map(item => {
                 const wpUrl = `http://localhost/Project/ABK/www/`
                 const onlyPath = decodeURI( item.node.url.replace(wpUrl,``))   
                 return(
                   <li>
-                      <Link key= {item.id} to = {`/${onlyPath}/`}> {item.node.label} </Link>
-                            <DivDrop>
+                      <Link key= {item.id} to = {`/${onlyPath}/`} > {item.node.label}</Link>
+                            <div>
                                   {item.node.childItems.edges && item.node.childItems.edges.map(subItem => {
                                     const wpUrlCatPro = `http://localhost/Project/ABK/www/category/`
                                     const onlyPathSub = decodeURI( subItem.node.url.replace(wpUrlCatPro,``))
@@ -129,13 +172,10 @@ class MainMenu extends Component {
                                       <Link key={ subItem.node.id } to = {onlyPath + '/' + onlyPathSub}> {subItem.node.label} </Link>
                                     )
                                   })}
-                            </DivDrop>
+                            </div>
                   </li>
                 )
                 })} 
-                  <li  className="toggle">
-                    <Link>Toggle</Link>
-                  </li>
           </UlMain>
       </div>
       </LayoutWrapper>

@@ -17,9 +17,9 @@ const LayoutWrapper = styled.div`
 `
 const Text = styled.div`
   text-align: center;
-  position: absolute;
-  top: 65%;
-  left: 50%;
+  /* position: absolute; */
+  /* top: 65%; */
+  /* left: 50%; */
   transform: translate(-50%, -50%);
   color: white;
     h1{
@@ -58,10 +58,11 @@ const Text = styled.div`
                 font-size: 15px;
                 }
     }
-  @media all and (max-width: 1024px) {
+  }
+  /* @media all and (max-width: 1024px) {
           top: 30%;
           
-    }
+    } */
 `
 
 // const DivLink = styled.div`
@@ -84,12 +85,11 @@ class HomePage extends Component {
         
         return(
            <Layout>
-               <SlideHeader/>
-                    <Text>
+                    {/* <Text>
                         <h1 >WELCOME</h1>
 						<h2>ABK ENGINEERING AND MACHINE</h2>
 						<div><Link to = 'product' >Product</Link></div>
-                    </Text>
+                    </Text> */}
                     <LayoutWrapper>
                         <JustWeb/>
                         <ProductListHomePage/>

@@ -26,15 +26,18 @@ const FooterCtn = styled.div`
 
 `
 const FooterItem = styled.div`
-    /* display: flex; */
+    display: flex;
     flex-wrap:wrap;
-    /* justify-content:space-around; */
+    justify-content:space-around;
     max-width:1064px;
     height: auto;
-    width: 100%;
     margin: 0 auto;
     padding: 20px 0 20px 0;
     color: #20cbd4; 
+    div{
+        width: 300px;
+        /* display:flex; */
+    }
 `
 
 class Footer extends Component {
@@ -44,14 +47,17 @@ class Footer extends Component {
             <FooterCtn>
               <FooterItem>
                   <div>
-                      <h2> NEWS </h2>
-                  </div>
-                  <div>
-                      <h2> CONTACT INFO </h2>
-                      <FooterContactItem/>
+                        <h2> CONTACT INFO </h2>
+                        <FooterContactItem/>
                   </div>
                   <div>
                       <h2> LOCATION </h2>
+                      <p>
+                            ที่อยู่: ตำบล ลำไทร อำเภอลำลูกกา ปทุมธานี 12150
+                            ชั่วโมง: 
+                            ปิด ⋅ เปิด 06:00 ส.
+                            โทรศัพท์: 088 001 7988
+                      </p>
                   </div>
               </FooterItem>
                 <FooterCopy>

@@ -1,5 +1,5 @@
 import React from 'react'
-import slide1 from '../../images/slide-header/grinding.png'
+import slide1 from '../../images/slide-header/banner.png'
 import styled from 'styled-components'
 
 

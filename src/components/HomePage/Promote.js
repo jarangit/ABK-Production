@@ -26,7 +26,7 @@ const Column = styled.div`
     display: flex;
     flex-wrap:wrap;
     justify-content: space-around;
-
+    align-items:center;
     margin: 100px 0;
     box-shadow: 0 10px 25px rgba(0,0,0,.2);
     border-radius: 10px;
@@ -50,6 +50,12 @@ const Img = styled.img`
 const Promote = () => {
     return(
             <Column>
+               
+                <Column1>
+                <div>
+                    <Img src="http://localhost/Project/ABK/www/wp-content/uploads/2020/02/pinion-640484.jpg"/>
+                </div>
+                </Column1>
                 <Column1>
                     <div>
                     Copyleft is a play on the word copyright and describes the practice of using 
@@ -59,20 +65,7 @@ const Promote = () => {
                     <LinkButt to ='product' key="#"> 
                                     <button> เยี่ยมชมสินค้า  </button>
                                 </LinkButt> 
-                </Column1>
-                <Column1>
-                <div>
-                    <Img src="http://localhost/Project/ABK/www/wp-content/uploads/2020/02/pinion-640484.jpg"/>
-                </div>
-                </Column1>
-                
-                <div>
-                    <div>
-                    
-                    </div>
-                                        
-                </div>
-               
+                </Column1>           
             </Column>
     )
 }

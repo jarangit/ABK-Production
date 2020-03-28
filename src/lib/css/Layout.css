@@ -1,6 +1,6 @@
 body,html{
     padding: 0 ;
-    margin: 0 ;    
+    margin: 0 ;  
   }
 @font-face {
   font-family: myFirstFont;
@@ -19,3 +19,14 @@ a {
   text-decoration: none;
   color: #17949b;
 }
+
+.toggle {
+  text-align: right;
+  display:none;
+} 
+
+@media all and(max-width: 900px){
+  .sc-oTbqq .glbJee{
+     padding: 0 20px;
+   }   
+}  

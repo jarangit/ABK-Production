@@ -9,11 +9,13 @@ const ProductGrid = styled.div`
 max-width: 1064px;
 display:flex;
 flex-wrap:wrap;
+justify-content:center;
 margin: 20px auto;
 grid-gap: 35px;
 `
 const Div = styled.div`
     margin: 40px 0;
+    align-items:center;
 `
 
 

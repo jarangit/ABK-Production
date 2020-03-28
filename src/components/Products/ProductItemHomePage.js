@@ -5,7 +5,7 @@ import { Link } from 'gatsby'
 
 
 const Img = styled.img`
-    max-width: 325px;
+    max-width: 200px;
     width: 100%;
 `
 // const Button = styled.button`
@@ -23,7 +23,8 @@ const Img = styled.img`
 const Block = styled.div`
     border-radius: 10px;
     text-align:center;
-    margin: 0 10px;
+    padding:10px;
+    margin: 10px;
     border: 1px solid #D5D8DC ;
     :hover{
         box-shadow: 0 10px 25px rgba(0,0,0,.2);

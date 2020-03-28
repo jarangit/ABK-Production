@@ -7,6 +7,7 @@ const BlogGrid = styled.div`
 max-width: 1064px;
 display:flex;
 flex-wrap:wrap;
+justify-content:center;
 margin: 0 auto;
 grid-gap: 35px;
 overflow: hidden;

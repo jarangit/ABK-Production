@@ -17,33 +17,22 @@ const Img = styled.img`
 `
 const Div = styled.div`
     width: 100%;
-    display: grid;
-    grid-template-columns: 532px 532px;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content:space-around;
     margin: 40px 0;
-    padding: 15px;
     border: 2px solid #D5D8DC;
     border-radius: 10px;
+    div{
+        margin: 5px;
+    }
 
 `
-// const Button = styled.button`
-//     width: 150px;
-//     background-color: #17949b;
-//     border: none;
-//     /* padding: 10px; */
-//     color: white;
-//     ${Button}:hover&{
-//         background-color: #42D0D8;
-//     }
-// `
 const BlockImg = styled.div`
     margin: 0 auto;
 `
 
 const BlockButton = styled.div`
-    /* background: red; */
-    /* display: grid; */
-    /* grid-template-columns: 50% auto; */
-    /* justify-content: space-between; */
     border-style:solid none none none;
     border-color: #D5D8DC;
     padding-top: 10px;
@@ -52,7 +41,6 @@ const BlockButton = styled.div`
             width: 150px;
             background-color: #17949b;
             border: none;
-            /* padding: 10px; */
             color: white;
             :hover{
             background-color: #42D0D8;
@@ -62,17 +50,13 @@ const BlockButton = styled.div`
 //----------endstyle----------
 const ProductSingleTemplate = (data) =>{
 
-    const [show, setShow] = useState(false)
-    
-    // const ShowModal = () =>{
-    //   return(
-    //       <div>jaran</div>
-    //   )
-    // }
     const { name, regularPrice,description,image, productCategories } = data.pageContext
     const ShowProduct = () => {
         return(
             <Div>
+                <BlockImg>
+                    <Img src={image.mediaItemUrl} alt={image.altText}/>
+                </BlockImg>
                 <div>
                     <div> <h1> {name} </h1> </div>
                     <p dangerouslySetInnerHTML={{__html: description}} />
@@ -97,9 +81,7 @@ const ProductSingleTemplate = (data) =>{
                     </BlockButton>
 
                 </div>
-                <BlockImg>
-                    <Img src={image.mediaItemUrl} alt={image.altText}/>
-                </BlockImg>
+                
             </Div>
         )
     }

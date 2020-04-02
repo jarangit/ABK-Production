@@ -5,8 +5,8 @@ import BlogItemCatPage from '../BlogCat/BlogItemCatPage'
 
 const BlogGrid = styled.div`
 max-width: 1064px;
-display: grid;
-grid-template-columns: 295px 295px 295px;
+display: flex;
+flex-wrap:wrap;
 margin: 0 auto;
 grid-gap: 35px;
 overflow: hidden;
@@ -14,11 +14,7 @@ overflow: hidden;
 const Div = styled.div`
   margin: 80px 0;
   a{
-    text-decoration: none;
-    color: black;
-    :hover{
-        color:#17949b;
-    }
+    color:black;
   }
 `
 

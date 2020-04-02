@@ -7,20 +7,21 @@ import styled from 'styled-components'
 import SlideHeader from "./slideHeader"
 
 const LayoutWrapper = styled.div`
-    width:1064px;
+    max-width:1064px;
     margin: 0 auto;
+    @media all and (max-width: 1024px){
+      padding: 0 5%;
+    }
 `
 
-const Layout = ({ children }) => {
+const Layout = ({ children }, props) => {
+  console.log(props.headerImg)
   return(
     <div>
-      {/* <GlobalStyles/> */}
       <MainMenu/>
-      {/* <SlideHeader/> */}
-      <LayoutWrapper>
-      {children}
-
-      </LayoutWrapper>
+        <LayoutWrapper>
+            {children}
+        </LayoutWrapper>
       <Footer/>
     </div>
   )

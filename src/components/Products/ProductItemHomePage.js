@@ -32,7 +32,7 @@ const Block = styled.div`
     }
     a{
         text-decoration: none;
-        color:black;
+        color:red;
         font-weight:bold;
         button{
             background-color: #17949b;
@@ -42,7 +42,7 @@ const Block = styled.div`
             margin-top: 20px;
             color: white;
             font-weight: bold;
-            :hover&{
+            :hover {
             background-color: #42D0D8;
             }
         }
@@ -60,12 +60,12 @@ const ProductItemHomePage = (props) => {
 
     return(
         <Block>
-             <Link key={id} to = {url}>
                     <Img src={image.mediaItemUrl} alt={image.altText}/>
                     <div> {name} </div>
                     <div> {regularPrice} </div>
-                    <button> รายละเอียดสินค้า </button>
-                </Link>
+                    <Link key={id} to = {url}>
+                        <button> รายละเอียดสินค้า </button>
+                    </Link>
         </Block>
     )
 }

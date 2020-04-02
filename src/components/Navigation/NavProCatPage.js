@@ -11,7 +11,6 @@ const Div = styled.div`
   border-radius: 20px; */
 `
 const DivItem = styled.div`
-line-height:10px;
   border-left: 1px solid;
   padding: 0 15px;
   a{

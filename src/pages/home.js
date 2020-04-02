@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import styled from 'styled-components'
-import SlideHeader from '../components/Layout/slideHeader'
+import SlideHeader from '../components/Layout/slideHeader';
 import { Link } from 'gatsby';
 import JustWeb from '../components/HomePage/just-web';
 import ProductListHomePage from '../components/Products/ProductListHomePage'
@@ -13,7 +13,6 @@ import Layout from '../components/Layout/layout';
 const LayoutWrapper = styled.div`
     max-width:1064px;
     margin: 0 auto;
-    
 `
 const Text = styled.div`
   text-align: center;
@@ -85,17 +84,10 @@ class HomePage extends Component {
         
         return(
            <Layout>
-                    {/* <Text>
-                        <h1 >WELCOME</h1>
-						<h2>ABK ENGINEERING AND MACHINE</h2>
-						<div><Link to = 'product' >Product</Link></div>
-                    </Text> */}
-                    <LayoutWrapper>
                         <JustWeb/>
                         <ProductListHomePage/>
                         <Promote/>
                         <BlogListHomepage/>
-                    </LayoutWrapper>
            </Layout>
         )
     }

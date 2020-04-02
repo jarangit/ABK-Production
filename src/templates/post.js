@@ -41,13 +41,11 @@ export default ({pageContext}) => {
         <Layout>
     {/* <Img src ={data.pageContext.featuredImage.mediaItemUrl} /> */}
                     <div> {ShowImg()} </div>
-            <LayoutWrapper>
                 <NavPost data = {pageContext} />
                 <Div>
                     <h2 dangerouslySetInnerHTML= {{__html: pageContext.title}} />
                     <div dangerouslySetInnerHTML={{__html: pageContext.content}}/>
                 </Div>
-             </LayoutWrapper>
         </Layout>
      </div>
     )

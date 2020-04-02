@@ -1,5 +1,5 @@
 import React from 'react'
-import slide1 from '../../images/slide-header/banner.png'
+import slide1 from '../../images/slide-header/grinding.png'
 import styled from 'styled-components'
 
 
@@ -14,10 +14,13 @@ const Slide1 = styled.img`
 
 
 //------------------------------------------------------------
-const SlideHeader = () => {
+const SlideHeader = (props) => {
+  console.log(props.testProps)
     return(
       <div>
-        <Slide1 src={ slide1 }/>
+        {props.testProps}
+        {/* <Slide1 src={ props.headerImgPage }/> */}
+        {/* <Slide1 src={ slide1}/> */}
       </div>
     )
     

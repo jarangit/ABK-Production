@@ -17,7 +17,7 @@ const Img = styled.img`
 const BlockItem = styled.div`
     border-radius: 10px;
     text-align:center;
-    margin: 0 15px;
+    margin: 15px 15px;
     padding: 15px;
     border: 1px solid #D5D8DC ;
     ${BlockItem}:hover&{
@@ -51,9 +51,12 @@ const BlockItem = styled.div`
 // `
 
 const BlockCartItem = styled.div`
-    display:grid;
-    grid-template-columns: 320px 320px 320px;
+    display:flex;
+    flex-wrap:wrap; 
     margin: 10px 0;
+    @media all and (max-width: 500px){
+        justify-content:center;
+    }
 `
 const Div = styled.div`
     margin: 40px 0;
@@ -103,7 +106,6 @@ const ProductCatTemplate = (data) => {
     return(
         <Layout>
             <div> {ShowImg()} </div>
-           <LayoutWrapper>
                 <Div>
                     <NavProCatPage data = {data.pageContext} />
                      <p dangerouslySetInnerHTML={{__html: description}} />
@@ -112,7 +114,6 @@ const ProductCatTemplate = (data) => {
                          {ShowProduct()}
                      </BlockCartItem>
                 </Div>
-           </LayoutWrapper>
         </Layout>
     )
 }

@@ -28,7 +28,7 @@ class ProductList extends Component {
     
         //Display
         return(
-                <TestGrid> {showProduct()} </TestGrid>
+                <TestGrid> {showProduct()}  </TestGrid>
         )
     }
 }

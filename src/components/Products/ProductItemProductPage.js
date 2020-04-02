@@ -31,6 +31,9 @@ const BlockCartItem = styled.div`
             }
         }
     }
+    @media all and (max-width: 500px){
+        justify-content:center;
+    }
     
 `
 const Div = styled.div`

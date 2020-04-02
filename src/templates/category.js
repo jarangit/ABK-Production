@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { Link } from 'gatsby'
 
 
-//Style
+//---------Style
 const Img = styled.img`
     width:100%;
  `

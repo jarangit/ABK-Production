@@ -4,16 +4,17 @@ import styled from 'styled-components'
 import BlogItemHomePage from './BlogItemHomePage'
 
 const BlogGrid = styled.div`
-max-width: 1064px;
 display:flex;
 flex-wrap:wrap;
-justify-content:center;
 margin: 0 auto;
-grid-gap: 35px;
-overflow: hidden;
 `
 const Div = styled.div`
   margin: 80px 0;
+  @media all and (max-width: 870px){
+    div{
+      justify-content:center;
+    }
+  }
 `
 const BlogListHomepage = () => {
     return (
@@ -59,9 +60,11 @@ const BlogListHomepage = () => {
             return(
               <Div>
                 <h1> My Custommer </h1>
+                  <div>
                   <BlogGrid>
                       {ShowBlog()}
                   </BlogGrid>
+                  </div>
               </Div>
             )
         }}

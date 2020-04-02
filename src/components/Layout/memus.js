@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import Logo from '../../images/logo/logo.png'
 
 
-//Style
+//--------Style--------
 const LogoImg = styled.img`
     padding: auto 5px;
     width: 75px; 
@@ -29,6 +29,7 @@ const LayoutWrapper = styled.div`
     display: grid;
     grid-template-columns: 50% auto;
 `
+
 const UlMain = styled.ul`
   display:flex;
   flex-wrap:wrap;
@@ -91,25 +92,9 @@ const UlMain = styled.ul`
 
     @media all and  (min-width: 375px){
       
-      /* &.active{
-              li:not(.toggle){
-              display:block;
-            }     
-            display:block;
-
-            li{
-              div{
-                display:block;
-                position:relative;
-                a{
-                  padding: 0 16px;
-                }
-              }
-            }
-          }    */
     }
 `
- //------EndStyle-----
+ //--------EndStyle-------
 
 
 
@@ -145,7 +130,8 @@ class MainMenu extends Component {
 ` } render = { props => {
   const [ navOpen, setNavOpen ] = useState(false)
   return(
-    <MenusItem>
+   <div>
+      <MenusItem>
       <LayoutWrapper>
       <div>
         <Link to="/home">
@@ -180,6 +166,10 @@ class MainMenu extends Component {
       </div>
       </LayoutWrapper>
     </MenusItem>
+    <div>
+      {this.props.testProps}
+    </div>
+   </div>
   )
 }} />
 )

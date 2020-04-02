@@ -11,7 +11,6 @@ const Div = styled.div`
   border-radius: 20px; */
 `
 const DivItem = styled.div`
-line-height:10px;
   border-left: 1px solid;
   padding: 0 15px;
   a{
@@ -22,13 +21,6 @@ line-height:10px;
     }
   }
 `
-// const LinkItem = styled(Link)`
-//   text-decoration:none;
-//   color: #8f8f8f;
-//   ${LinkItem}:hover&{
-//     color:#1B2B45;
-//   }
-// `
 const DivActive = styled.div`
   color:#17949b;
   font-weight: bold;

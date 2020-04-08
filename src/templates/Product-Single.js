@@ -25,6 +25,7 @@ const Div = styled.div`
     border-radius: 10px;
     div{
         margin: 5px;
+        max-width:500px;
     }
 
 `
@@ -35,6 +36,7 @@ const BlockImg = styled.div`
 const BlockButton = styled.div`
     border-style:solid none none none;
     border-color: #D5D8DC;
+    border-width:100%;
     padding-top: 10px;
     margin-top: 15px;
     button{
@@ -58,13 +60,12 @@ const ProductSingleTemplate = (data) =>{
                     <Img src={image.mediaItemUrl} alt={image.altText}/>
                 </BlockImg>
                 <div>
-                    <div> <h1> {name} </h1> </div>
+                     <h1> {name} </h1>
                     <p dangerouslySetInnerHTML={{__html: description}} />
 
                     <BlockButton>
 
                         <div> 
-                            <div> 
                                 <h4> 
                                 หมวดหมู่สินค้า :
                                  {productCategories.nodes.map(item =>(
@@ -73,7 +74,6 @@ const ProductSingleTemplate = (data) =>{
                                     </Link>
                                 ))} 
                                 </h4>
-                            </div>
                             <h4> ราคา {regularPrice} บาท </h4>
                         </div>
 

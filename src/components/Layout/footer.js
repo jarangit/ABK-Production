@@ -23,6 +23,12 @@ const FooterCtn = styled.div`
     width: 100%;
     margin: 0 auto;
     background: #00181a;
+    /* height: 50px; */
+    flex-shrink: 0;
+
+    /* left: 0;
+    bottom: 0; */
+    /* position: fixed; */
 
 `
 const FooterItem = styled.div`
@@ -34,6 +40,7 @@ const FooterItem = styled.div`
     margin: 0 auto;
     padding: 20px 0 20px 0;
     color: #20cbd4; 
+    
     div{
         width: 300px;
         /* display:flex; */

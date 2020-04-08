@@ -7,6 +7,7 @@ import AllProduct from '../components/product'
 import NavPage from '../components/Navigation/NavPage'
 import SlideHeader from '../components/Layout/slideHeader'
 import MainMenu from '../components/Layout/memus'
+import SEO from '../components/seo'
 
 const Img = styled.img`
     background-size: cover;
@@ -26,7 +27,7 @@ const BlockImg = styled.div`
 
 
 const PageTemplate = (data) => {
-        const test = <MainMenu testprops = "jararn"/>
+        // const test = <MainMenu testprops = "jararn"/>
         // useEffect(() =>{
         //     // const urlTmg = data.pageContext.featuredImage
         //     // const showImg = () => {
@@ -48,6 +49,23 @@ const PageTemplate = (data) => {
         //         )
             
         // }, [])
+        const ShowImg = () => {
+            const urlTmg = data.pageContext.featuredImage
+            console.log(urlTmg)
+            if(urlTmg === null){
+                return ''
+             }else{
+                 return(
+                     <div>
+                         <SlideHeader testProps = "jaran1"/>
+                     </div>
+                    )
+             }
+        }
+        useEffect(() => {
+            ShowImg()
+        },[])
+        console.log(ShowImg())
     
    
 
@@ -71,6 +89,7 @@ const PageTemplate = (data) => {
     }
    return(
     <Layout>
+            <SEO title = {data.pageContext.title} />
             <Block>
             <NavPage data = {data.pageContext}/>
                 <h1> {data.pageContext.title} </h1>

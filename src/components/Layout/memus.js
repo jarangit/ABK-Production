@@ -2,6 +2,7 @@ import React, {Component, useState} from 'react'
 import { graphql, StaticQuery, Link } from 'gatsby'
 import styled from 'styled-components'
 import Logo from '../../images/logo/logo.png'
+import SlideHeader from '../Layout/slideHeader'
 
 
 //--------Style--------
@@ -167,7 +168,6 @@ class MainMenu extends Component {
       </LayoutWrapper>
     </MenusItem>
     <div>
-      {this.props.testProps}
     </div>
    </div>
   )

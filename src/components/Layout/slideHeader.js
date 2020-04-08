@@ -18,9 +18,7 @@ const SlideHeader = (props) => {
   console.log(props.testProps)
     return(
       <div>
-        {props.testProps}
-        {/* <Slide1 src={ props.headerImgPage }/> */}
-        {/* <Slide1 src={ slide1}/> */}
+        {props.testProps}jaran
       </div>
     )
     

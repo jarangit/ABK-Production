@@ -9,13 +9,13 @@ import SlideHeader from "./slideHeader"
 const LayoutWrapper = styled.div`
     max-width:1064px;
     margin: 0 auto;
+    flex: 1 0 auto;
     @media all and (max-width: 1024px){
       padding: 0 5%;
     }
 `
 
-const Layout = ({ children }, props) => {
-  console.log(props.headerImg)
+const Layout = ({ children }) => {
   return(
     <div>
       <MainMenu/>

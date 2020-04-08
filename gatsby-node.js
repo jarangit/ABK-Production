@@ -53,7 +53,7 @@ exports.createPages = async ({ graphql, actions }) => {
         }
         wordPress {
           categories(first: 100) {
-            nodes {
+            nodes {  
               id
               slug
               name

@@ -2,6 +2,7 @@ import React from 'react'
 import Layout from '../components/Layout/layout'
 import styled from 'styled-components'
 import NavPost from '../components/Navigation/NavPost'
+import SEO from '../components/seo'
 
 const Img = styled.img`
     background-size: cover;
@@ -11,11 +12,6 @@ const Img = styled.img`
     margin-left: auto;
     margin-right: auto;
  `
-const LayoutWrapper = styled.div`
-    max-width:1064px;
-    margin: 0 auto;
-    
-`
 const Div = styled.div`
     margin: 40px 0;
 `
@@ -40,7 +36,8 @@ export default ({pageContext}) => {
      <div>
         <Layout>
     {/* <Img src ={data.pageContext.featuredImage.mediaItemUrl} /> */}
-                    <div> {ShowImg()} </div>
+                    {/* <div> {ShowImg()} </div> */}
+                    <SEO title = {pageContext.title}/>
                 <NavPost data = {pageContext} />
                 <Div>
                     <h2 dangerouslySetInnerHTML= {{__html: pageContext.title}} />

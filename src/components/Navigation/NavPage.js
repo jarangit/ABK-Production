@@ -5,13 +5,10 @@ import styled from 'styled-components'
 const Div = styled.div`
   max-width: 2500px;
   margin: 30px 0;
-  padding: 15px;
   display: flex;
-  /* border: 1px solid #8f8f8f;
-  border-radius: 20px; */
 `
 const DivItem = styled.div`
-line-height:10px;
+  line-height:10px;
   border-left: 1px solid;
   padding: 0 15px;
   a{

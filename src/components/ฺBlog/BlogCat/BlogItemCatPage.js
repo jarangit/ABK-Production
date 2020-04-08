@@ -23,10 +23,10 @@ const BlogItem = styled.div`
 `
 
 const Block = styled.div`
-    width: 300px;
-    margin: 15px 5px;
+    width:250px;
+    margin: 30px 0;
     height: 300px;
-    /* padding:20px; */
+    padding:5px;
     overflow: hidden;
     border-radius:10px;
     ${Block}:hover&{
@@ -36,13 +36,10 @@ const Block = styled.div`
     a{
     text-decoration: none;
     color: black;
-    margin:5px;
     :hover{
         color:#17949b;
     }
-    div{
-        padding:5px;
-    }
+    
   }
 `
 

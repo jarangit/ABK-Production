@@ -105,7 +105,6 @@ const ProductCatTemplate = (data) => {
     }
     return(
         <Layout>
-            <div> {ShowImg()} </div>
                 <Div>
                     <NavProCatPage data = {data.pageContext} />
                      <p dangerouslySetInnerHTML={{__html: description}} />

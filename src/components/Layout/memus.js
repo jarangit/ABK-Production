@@ -145,7 +145,7 @@ class MainMenu extends Component {
                     <a to ="#"><i class="fas fa-bars"></i></a>
                   </li>
               { props.wordPress.menu.menuItems.edges.map(item => {
-                const wpUrl = `http://localhost/Project/ABK/www/`
+                const wpUrl = `http://api.abk-store.com`
                 const onlyPath = decodeURI( item.node.url.replace(wpUrl,``))   
                 return(
                   <li>

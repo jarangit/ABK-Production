@@ -53,7 +53,7 @@ const Promote = () => {
                
                 <Column1>
                 <div>
-                    <Img src="http://localhost/Project/ABK/www/wp-content/uploads/2020/02/pinion-640484.jpg"/>
+                    <Img src=""/>
                 </div>
                 </Column1>
                 <Column1>

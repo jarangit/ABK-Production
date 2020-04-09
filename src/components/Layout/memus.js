@@ -2,7 +2,6 @@ import React, {Component, useState} from 'react'
 import { graphql, StaticQuery, Link } from 'gatsby'
 import styled from 'styled-components'
 import Logo from '../../images/logo/logo.png'
-import SlideHeader from '../Layout/slideHeader'
 
 
 //--------Style--------
@@ -142,7 +141,7 @@ class MainMenu extends Component {
       <div>
           <UlMain className = { navOpen ? 'active' : ''}>
                   <li  className="toggle" onClick = { () => { setNavOpen(!navOpen) } }>
-                    <a to ="#"><i class="fas fa-bars"></i></a>
+                    <a to ="#" key=""><i class="fas fa-bars"></i></a>
                   </li>
               { props.wordPress.menu.menuItems.edges.map(item => {
                 const wpUrl = `http://localhost/Project/ABK/www/`

@@ -1,29 +1,19 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import Layout from '../components/Layout/layout'
 import styled from 'styled-components'
 import BlogListHomepage from '../components/ฺBlog/BlogListHomePage'
 import BlogListCatPage from '../components/ฺBlog/BlogCat/BlogListCatPage'
 import AllProduct from '../components/product'
 import NavPage from '../components/Navigation/NavPage'
-import SlideHeader from '../components/Layout/slideHeader'
-import MainMenu from '../components/Layout/memus'
 import SEO from '../components/seo'
 
-const Img = styled.img`
-    background-size: cover;
-    background-position: center;
-    width:100%;
-    overflow: hidden;
- `
+
 
 const Block = styled.div`
     margin: 40px;
 `
 
-const BlockImg = styled.div`
-    height: 500px;
-    overflow: hidden;
-`
+
 
 
 const PageTemplate = (data) => {
@@ -49,23 +39,23 @@ const PageTemplate = (data) => {
         //         )
             
         // }, [])
-        const ShowImg = () => {
-            const urlTmg = data.pageContext.featuredImage
-            console.log(urlTmg)
-            if(urlTmg === null){
-                return ''
-             }else{
-                 return(
-                     <div>
-                         <SlideHeader testProps = "jaran1"/>
-                     </div>
-                    )
-             }
-        }
-        useEffect(() => {
-            ShowImg()
-        },[])
-        console.log(ShowImg())
+        // const ShowImg = () => {
+        //     const urlTmg = data.pageContext.featuredImage
+        //     console.log(urlTmg)
+        //     if(urlTmg === null){
+        //         return ''
+        //      }else{
+        //          return(
+        //              <div>
+        //                  <SlideHeader testProps = "jaran1"/>
+        //              </div>
+        //             )
+        //      }
+        // }
+        // useEffect(() => {
+        //     ShowImg()
+        // },[])
+        // console.log(ShowImg())
     
    
 

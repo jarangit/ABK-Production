@@ -2,7 +2,6 @@ import React from 'react'
 import Layout from '../components/Layout/layout'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
-import SEO from '../components/seo'
 
 
 //---------Style
@@ -17,7 +16,7 @@ const BlockItem = styled.div`
     padding:5px;
     overflow: hidden;
     border-radius:10px;
-    ${BlockItem}:hover&{
+    :hover{
         box-shadow: 5px 5px 5px 5px rgba(0,0,0,.2);
     }
 `

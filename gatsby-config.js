@@ -17,7 +17,7 @@ module.exports = {
         // refetchInterval:60
        },
       },
-
+      
     {
       resolve: `gatsby-source-filesystem`,
       options: {

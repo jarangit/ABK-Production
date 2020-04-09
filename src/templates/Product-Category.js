@@ -5,11 +5,6 @@ import styled from 'styled-components'
 import {Link} from 'gatsby'
 
 
-const LayoutWrapper = styled.div`
-    max-width:1064px;
-    margin: 0 auto;
-    
-`
 const Img = styled.img`
     max-width: 150px;
     width: 100%;
@@ -20,7 +15,7 @@ const BlockItem = styled.div`
     margin: 15px 15px;
     padding: 15px;
     border: 1px solid #D5D8DC ;
-    ${BlockItem}:hover&{
+    :hover{
         box-shadow: 0 10px 25px rgba(0,0,0,.2);
         margin-top:-10px;
     }
@@ -62,30 +57,18 @@ const Div = styled.div`
     margin: 40px 0;
 `
 
-const BlockImg = styled.div`
-    height: 500px;
-    overflow: hidden;
-`
-const ImgBanner = styled.img`
-    /* margin: 0 0 60px 0; */
-    background-size: cover;
-    background-position: center;
-    width:100%;
-    overflow: hidden;
- `
-
 const ProductCatTemplate = (data) => {
-    const { name, products,slug,image, description } = data.pageContext
-    const ShowImg = () => {
-        if(image === null){
-           return ''
-        }else{
-            return(
-                <BlockImg ><ImgBanner src ={image.mediaItemUrl} /></BlockImg>
+    const { name, products,slug, description } = data.pageContext
+    // const ShowImg = () => {
+    //     if(image === null){
+    //        return ''
+    //     }else{
+    //         return(
+    //             <BlockImg ><ImgBanner src ={image.mediaItemUrl} /></BlockImg>
                 
-            )
-        }
-    } 
+    //         )
+    //     }
+    // } 
 
     const ShowProduct = () => {
         return(

@@ -10,12 +10,6 @@ width: 100%;
 
 `
 
-const LinkItem = styled(Link)`
-    text-decoration: none;
-    color: black;
-    
-`
-
 const BlogItem = styled.div`
     max-width: 325px;
     height: 150px;
@@ -29,7 +23,7 @@ const Block = styled.div`
     padding:5px;
     overflow: hidden;
     border-radius:10px;
-    ${Block}:hover&{
+    :hover{
         box-shadow: 5px 5px 5px 5px rgba(0,0,0,.2);
     }
     

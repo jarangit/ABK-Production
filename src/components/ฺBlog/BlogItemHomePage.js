@@ -29,7 +29,7 @@ const Block = styled.div`
     padding:5px;
     overflow: hidden;
     border-radius:10px;
-    ${Block}:hover&{
+    :hover{
         box-shadow: 0 10px 25px rgba(0,0,0,.2);
     }
 `

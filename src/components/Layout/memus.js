@@ -152,7 +152,7 @@ class MainMenu extends Component {
                       <Link key= {item.id} to = {`/${onlyPath}/`} > {item.node.label}</Link>
                             <div>
                                   {item.node.childItems.edges && item.node.childItems.edges.map(subItem => {
-                                    const wpUrlCatPro = `http://localhost/Project/ABK/www/category/`
+                                    const wpUrlCatPro = `http://api.abk-store.com/category/`
                                     const onlyPathSub = decodeURI( subItem.node.url.replace(wpUrlCatPro,``))
                                     if(subItem)
                                     return(

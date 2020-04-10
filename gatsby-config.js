@@ -13,7 +13,7 @@ module.exports = {
       options: {
         typeName: `WordPress`,
         fieldName: `wordPress`,
-        url: `https://api.abk-store.com/graphql`,
+        url: `http://localhost/Project/ABK/www/graphql`,
         // refetchInterval:60
        },
       },

@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 import styled from 'styled-components';
-import FooterContactItem from './FooterContactItem'
+import FooterContactItem from './footerContactItem'
 
 
 const FooterCopy = styled.div`

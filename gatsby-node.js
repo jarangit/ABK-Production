@@ -196,7 +196,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
 
           //ProductCategory
-          const ProducCatTemplate = path.resolve(`src/templates/Product-Category.js`)
+          const ProducCatTemplate = path.resolve(`src/templates/product-Category.js`)
           result.data.wordPress.productCategories.nodes.forEach(edge => {
 
             const deCodeMain = decodeURI(edge.slug);
@@ -221,7 +221,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
       
           // SingleProduct
-          const ProductSingleTemplate = path.resolve(`src/templates/Product-Single.js`)
+          const ProductSingleTemplate = path.resolve(`src/templates/product-Single.js`)
           result.data.wordPress.products.nodes.forEach(edge => {
             edge.productCategories.nodes.map(catProduct=> {
               const deCode = decodeURI("/product/" + catProduct.slug + '/' + edge.slug);

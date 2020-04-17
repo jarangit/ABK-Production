@@ -29,9 +29,10 @@ a {
   text-align: right;
   display:none;
 } 
-
+/* 
 @media all and(max-width: 900px){
   .sc-oTbqq .glbJee{
-     padding: 0 20px;
+     padding: 0 500px;
+     background-color: red;
    }   
-}  
+}   */

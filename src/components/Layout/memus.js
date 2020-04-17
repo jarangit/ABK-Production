@@ -144,14 +144,14 @@ class MainMenu extends Component {
                     <a to ="#" key=""><i class="fas fa-bars"></i></a>
                   </li>
               { props.wordPress.menu.menuItems.edges.map(item => {
-                const wpUrl = `http://api.abk-store.com`
+                const wpUrl = `http://localhost/Project/ABK/www/`
                 const onlyPath = decodeURI( item.node.url.replace(wpUrl,``))   
                 return(
                   <li>
                       <Link key= {item.id} to = {`/${onlyPath}/`} > {item.node.label}</Link>
                             <div>
                                   {item.node.childItems.edges && item.node.childItems.edges.map(subItem => {
-                                    const wpUrlCatPro = `http://api.abk-store.com/category/`
+                                    const wpUrlCatPro = `http://localhost/Project/ABK/www/category/`
                                     const onlyPathSub = decodeURI( subItem.node.url.replace(wpUrlCatPro,``))
                                     if(subItem)
                                     return(

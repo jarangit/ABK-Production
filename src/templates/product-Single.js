@@ -2,7 +2,7 @@ import React from 'react'
 import Layout from '../components/Layout/layout'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
-import NavProSingPage from '../components/Navigation/navProSingPage'
+import NavProSingPage from '../components/Navigation/navprosingPage'
 
 //-------------styled----------
 const LayoutWrapper = styled.div`

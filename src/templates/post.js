@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/Layout/layout'
 import styled from 'styled-components'
-import NavPost from '../components/navigation/NavPost'
+import NavPost from '../components/navigation/navpost'
 import SEO from '../components/seo'
 
 const Div = styled.div`

@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import BlogListHomepage from '../components/ฺBlog/blogListHomePage'
 import BlogListCatPage from '../components/ฺBlog/BlogCat/blogListCatPage'
 import AllProduct from '../components/product'
-import NavPage from '../components/Navigation/navPage'
+import NavPage from '../components/Navigation/navpage'
 import SEO from '../components/seo'
 
 

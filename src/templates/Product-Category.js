@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../components/Layout/layout'
-import NavProCatPage from '../components/Navigation/navprocatPage'
+import NavProCatPage from '../components/Navigation/navprocatpage'
 import styled from 'styled-components'
 import {Link} from 'gatsby'
 

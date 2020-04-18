@@ -1,7 +1,7 @@
 import React, {Component, useState} from 'react'
 import { graphql, StaticQuery, Link } from 'gatsby'
 import styled from 'styled-components'
-import Logo from '../../images/logo/logo.png'
+// import Logo from '../../images/logo/logo.png'
 
 
 //--------Style--------
@@ -135,7 +135,7 @@ class MainMenu extends Component {
       <LayoutWrapper>
       <div>
         <Link to="/home">
-            <LogoImg src={Logo}/> 
+            {/* <LogoImg src={Logo}/>  */}Logo
         </Link>    
       </div>
       <div>

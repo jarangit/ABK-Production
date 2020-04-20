@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/Layout/layout'
 import styled from 'styled-components'
-import NavPost from '../components/navigation/navpost'
+// import NavPost from '../components/navigation/navpost'
 import SEO from '../components/seo'
 
 const Div = styled.div`
@@ -27,7 +27,7 @@ export default ({pageContext}) => {
     {/* <Img src ={data.pageContext.featuredImage.mediaItemUrl} /> */}
                     {/* <div> {ShowImg()} </div> */}
                     <SEO title = {pageContext.title}/>
-                <NavPost data = {pageContext} />
+                {/* <NavPost data = {pageContext} /> */}
                 <Div>
                     <h2 dangerouslySetInnerHTML= {{__html: pageContext.title}} />
                     <div dangerouslySetInnerHTML={{__html: pageContext.content}}/>

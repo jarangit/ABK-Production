@@ -104,7 +104,7 @@ class MainMenu extends Component {
     <StaticQuery  query={ graphql`
     {
   wordPress {
-    menu(id: "TWVudToy") {
+    menu(id: "TWVudToxNg==") {
       name
       menuItems {
         edges {

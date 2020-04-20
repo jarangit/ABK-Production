@@ -1,0 +1,641 @@
+[33mcommit acdd8e962fe7cfa6ae85f6d9ba72e9ca43e9018e[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: jarangit <jaran.dch@gmail.com>
+Date:   Mon Apr 20 18:17:08 2020 +0700
+
+    123
+
+[1mdiff --git a/src/components/HomePage/Promote.js b/src/components/HomePage/Promote.js[m
+[1mdeleted file mode 100644[m
+[1mindex a0e8c72..0000000[m
+[1m--- a/src/components/HomePage/Promote.js[m
+[1m+++ /dev/null[m
+[36m@@ -1,75 +0,0 @@[m
+[31m-import React from 'react'[m
+[31m-import styled from 'styled-components'[m
+[31m-import { Link } from 'gatsby'[m
+[31m-[m
+[31m-[m
+[31m-//-------------styled-----------[m
+[31m-const LinkButt = styled(Link)`[m
+[31m-    text-decoration: none;[m
+[31m-    color: white;[m
+[31m-    font-weight:bold;[m
+[31m-    /* padding: 20px; */[m
+[31m-    button{[m
+[31m-        background-color: #17949b;[m
+[31m-    color: white;[m
+[31m-    border: none;[m
+[31m-    padding: 10px;[m
+[31m-    border-radius: 0.5rem;[m
+[31m-    margin-top: 20px;[m
+[31m-    font-weight: bold;[m
+[31m-    :hover{[m
+[31m-        background-color: #42D0D8;[m
+[31m-    }[m
+[31m-}[m
+[31m-`[m
+[31m-const Column = styled.div`[m
+[31m-    display: flex;[m
+[31m-    flex-wrap:wrap;[m
+[31m-    justify-content: space-around;[m
+[31m-    align-items:center;[m
+[31m-    margin: 100px 0;[m
+[31m-    box-shadow: 0 10px 25px rgba(0,0,0,.2);[m
+[31m-    border-radius: 10px;[m
+[31m-[m
+[31m-    [m
+[31m-`[m
+[31m-const Column1 = styled.div`[m
+[31m-  margin: 10px;[m
+[31m-  width:500px;[m
+[31m-  font-size: 16px;[m
+[31m-`[m
+[31m-const Img = styled.img`[m
+[31m-    width: 100%;[m
+[31m-`[m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-//--------endStyled----------------[m
+[31m-[m
+[31m-[m
+[31m-const Promote = () => {[m
+[31m-    return([m
+[31m-            <Column>[m
+[31m-               [m
+[31m-                <Column1>[m
+[31m-                <div>[m
+[31m-                    <Img src=""/>[m
+[31m-                </div>[m
+[31m-                </Column1>[m
+[31m-                <Column1>[m
+[31m-                    <div>[m
+[31m-                    Copyleft is a play on the word copyright and describes the practice of using [m
+[31m-                                copyright law to remove restrictions on distributing copies and modified versions of a work.[m
+[31m-                                [15] The aim of [m
+[31m-                    </div>[m
+[31m-                    <LinkButt to ='product' key="#"> [m
+[31m-                                    <button> เยี่ยมชมสินค้า  </button>[m
+[31m-                                </LinkButt> [m
+[31m-                </Column1>           [m
+[31m-            </Column>[m
+[31m-    )[m
+[31m-}[m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-export default Promote;[m
+[1mdiff --git a/src/components/Layout/FooterContactItem.js b/src/components/Layout/FooterContactItem.js[m
+[1mdeleted file mode 100644[m
+[1mindex e3b53ba..0000000[m
+[1m--- a/src/components/Layout/FooterContactItem.js[m
+[1m+++ /dev/null[m
+[36m@@ -1,64 +0,0 @@[m
+[31m-import React from 'react'[m
+[31m-import styled from 'styled-components'[m
+[31m-import { graphql, StaticQuery, Link } from 'gatsby'[m
+[31m-[m
+[31m-//----------styled---------[m
+[31m-[m
+[31m-const Blog = styled.div`[m
+[31m-    align-content: center;[m
+[31m-    a{[m
+[31m-        text-decoration:none;[m
+[31m-        color: #20cbd4;[m
+[31m-        :hover{[m
+[31m-            color:white;[m
+[31m-        }[m
+[31m-    }[m
+[31m-`[m
+[31m-const FooterContactItem  =() => {[m
+[31m-    return([m
+[31m-        <StaticQuery  query={ graphql`[m
+[31m-        {[m
+[31m-    wordPress {[m
+[31m-    menus(where: {slug: "footercontact"}) {[m
+[31m-      nodes {[m
+[31m-        name[m
+[31m-        menuItems {[m
+[31m-          nodes {[m
+[31m-            url[m
+[31m-            label[m
+[31m-          }[m
+[31m-        }[m
+[31m-      }[m
+[31m-    }[m
+[31m-  }[m
+[31m-  }[m
+[31m-[m
+[31m-    `} render = {props => {[m
+[31m-        const ShowItem = () => {[m
+[31m-            return([m
+[31m-                <div>[m
+[31m-                    {props.wordPress.menus.nodes.map(edges => {[m
+[31m-                        return([m
+[31m-                            edges.menuItems.nodes.map(items=> {[m
+[31m-                                return([m
+[31m-                                    <Blog>[m
+[31m-                                        <Link> {items.label} </Link>[m
+[31m-                                    </Blog>[m
+[31m-                                )[m
+[31m-                            })[m
+[31m-                        )[m
+[31m-                    })}[m
+[31m-                </div>[m
+[31m-            )[m
+[31m-        }[m
+[31m-[m
+[31m-        return([m
+[31m-                <div> {ShowItem()} </div>[m
+[31m-            )[m
+[31m-        }} />[m
+[31m-    )[m
+[31m-}[m
+[31m-export default FooterContactItem[m
+[31m-[m
+[31m-[m
+[31m-[m
+[1mdiff --git a/src/components/Modal/Modal1.js b/src/components/Modal/Modal1.js[m
+[1mdeleted file mode 100644[m
+[1mindex 06c935d..0000000[m
+[1m--- a/src/components/Modal/Modal1.js[m
+[1m+++ /dev/null[m
+[36m@@ -1,55 +0,0 @@[m
+[31m-import React from 'react';[m
+[31m-import ReactDOM from 'react-dom';[m
+[31m-[m
+[31m-import PropTypes from 'prop-types';[m
+[31m-import styled from 'styled-components'[m
+[31m-[m
+[31m-[m
+[31m-// gray background[m
+[31m-const backdropStyle = {[m
+[31m-    position: 'fixed',[m
+[31m-    top: 0,[m
+[31m-    bottom: 0,[m
+[31m-    left: 0,[m
+[31m-    right: 0,[m
+[31m-    backgroundColor: 'rgba(0,0,0,0.3)',[m
+[31m-    padding: 50[m
+[31m-}[m
+[31m-[m
+[31m-const modalStyle = {[m
+[31m-    backgroundColor: '#fff',[m
+[31m-    borderRadius: 5,[m
+[31m-    maxWidth: 500,[m
+[31m-    minHeight: 300,[m
+[31m-    margin: '0 auto',[m
+[31m-    padding: 30,[m
+[31m-    position: "relative"[m
+[31m-};[m
+[31m-[m
+[31m-const footerStyle = {[m
+[31m-    position: "absolute",[m
+[31m-    bottom: 20[m
+[31m-};[m
+[31m-[m
+[31m-[m
+[31m-export default class Modal1 extends React.Component {[m
+[31m-    onClose = (e) =>{[m
+[31m-        this.props.onClose && this.props.onClose(e)[m
+[31m-    }[m
+[31m-    render() {[m
+[31m-        if(!this.props.show){[m
+[31m-            return null[m
+[31m-        }[m
+[31m-[m
+[31m-        return([m
+[31m-            <div style = {backdropStyle}> [m
+[31m-                <div style = {modalStyle}>[m
+[31m-                    {this.props.children}[m
+[31m-                <div style = {footerStyle}>[m
+[31m-                    <button onClick = {(e)=> {this.onClose(e)}}> X </button>[m
+[31m-                </div> [m
+[31m-                </div>[m
+[31m-            </div>[m
+[31m-        )[m
+[31m-    }[m
+[31m-}[m
+\ No newline at end of file[m
+[1mdiff --git a/src/components/Navigation/NavPage.js b/src/components/Navigation/NavPage.js[m
+[1mdeleted file mode 100644[m
+[1mindex 2ebd155..0000000[m
+[1m--- a/src/components/Navigation/NavPage.js[m
+[1m+++ /dev/null[m
+[36m@@ -1,44 +0,0 @@[m
+[31m-import React from 'react'[m
+[31m-import {Link} from 'gatsby'[m
+[31m-import styled from 'styled-components'[m
+[31m-[m
+[31m-const Div = styled.div`[m
+[31m-  max-width: 2500px;[m
+[31m-  margin: 30px 0;[m
+[31m-  display: flex;[m
+[31m-`[m
+[31m-const DivItem = styled.div`[m
+[31m-  line-height:10px;[m
+[31m-  border-left: 1px solid;[m
+[31m-  padding: 0 15px;[m
+[31m-  a{[m
+[31m-    text-decoration:none;[m
+[31m-    color: #8f8f8f;[m
+[31m-    :hover{[m
+[31m-    color:#1B2B45;[m
+[31m-    }[m
+[31m-  }[m
+[31m-`[m
+[31m-const DivActive = styled.div`[m
+[31m-  color:#17949b;[m
+[31m-  font-weight: bold;[m
+[31m-`[m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-const NavPage = (props) =>{[m
+[31m-  return([m
+[31m-    <Div> [m
+[31m-[m
+[31m-      <DivItem>[m
+[31m-        <Link to = 'home'> home </Link>[m
+[31m-      </DivItem>[m
+[31m-    [m
+[31m-      <DivItem>[m
+[31m-          <DivActive> {props.data.title}  </DivActive>[m
+[31m-      </DivItem>[m
+[31m-[m
+[31m-    </Div>[m
+[31m-  )[m
+[31m-}[m
+[31m-export default NavPage[m
+\ No newline at end of file[m
+[1mdiff --git a/src/components/Navigation/NavPost.js b/src/components/Navigation/NavPost.js[m
+[1mdeleted file mode 100644[m
+[1mindex 1f45d74..0000000[m
+[1m--- a/src/components/Navigation/NavPost.js[m
+[1m+++ /dev/null[m
+[36m@@ -1,49 +0,0 @@[m
+[31m-import React from 'react'[m
+[31m-import {Link} from 'gatsby'[m
+[31m-import styled from 'styled-components'[m
+[31m-[m
+[31m-const Div = styled.div`[m
+[31m-  max-width: 2500px;[m
+[31m-  margin: 30px 0;[m
+[31m-  display: flex;[m
+[31m-`[m
+[31m-const DivItem = styled.div`[m
+[31m-  border-left: 1px solid;[m
+[31m-  padding: 0 15px;[m
+[31m-  a{[m
+[31m-      text-decoration:none;[m
+[31m-      color: #8f8f8f;[m
+[31m-      :hover{[m
+[31m-      color:#1B2B45;[m
+[31m-    }[m
+[31m-  }[m
+[31m-`[m
+[31m-const DivActive = styled.div`[m
+[31m-  color:#17949b;[m
+[31m-  font-weight: bold;[m
+[31m-`[m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-const NavPost = (props) =>{[m
+[31m-  return([m
+[31m-    <Div> [m
+[31m-      <DivItem>[m
+[31m-        <Link to = 'home'> home </Link>[m
+[31m-      </DivItem>[m
+[31m-[m
+[31m-      <DivItem>[m
+[31m-        {props.data.categories.nodes.map(catItem=>{[m
+[31m-          return([m
+[31m-            <Link to = {decodeURI('blog/'+catItem.slug)}> {catItem.slug} </Link>[m
+[31m-          )[m
+[31m-        })}[m
+[31m-      </DivItem>[m
+[31m-      [m
+[31m-      <DivItem>[m
+[31m-          <DivActive> {props.data.title}  </DivActive>[m
+[31m-      </DivItem>[m
+[31m-    </Div>[m
+[31m-  )[m
+[31m-}[m
+[31m-export default NavPost[m
+\ No newline at end of file[m
+[1mdiff --git a/src/components/Navigation/NavProCatPage.js b/src/components/Navigation/NavProCatPage.js[m
+[1mdeleted file mode 100644[m
+[1mindex 37e14fd..0000000[m
+[1m--- a/src/components/Navigation/NavProCatPage.js[m
+[1m+++ /dev/null[m
+[36m@@ -1,53 +0,0 @@[m
+[31m-import React from 'react'[m
+[31m-import {Link} from 'gatsby'[m
+[31m-import styled from 'styled-components'[m
+[31m-[m
+[31m-const Div = styled.div`[m
+[31m-  max-width: 2500px;[m
+[31m-  margin: 30px 0;[m
+[31m-  display: flex;[m
+[31m-`[m
+[31m-const DivItem = styled.div`[m
+[31m-  border-left: 1px solid;[m
+[31m-  padding: 0 15px;[m
+[31m-  a{[m
+[31m-    text-decoration:none;[m
+[31m-    color: #8f8f8f;[m
+[31m-    :hover{[m
+[31m-    color:#1B2B45;[m
+[31m-  }[m
+[31m-  }[m
+[31m-`[m
+[31m-// const LinkItem = styled(Link)`[m
+[31m-//   text-decoration:none;[m
+[31m-//   color: #8f8f8f;[m
+[31m-//   ${LinkItem}:hover&{[m
+[31m-//     color:#1B2B45;[m
+[31m-//   }[m
+[31m-// `[m
+[31m-const DivActive = styled.div`[m
+[31m-  color:#17949b;[m
+[31m-  font-weight: bold;[m
+[31m-`[m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-const NavProCatPage = (props) =>{[m
+[31m-  return([m
+[31m-    <Div> [m
+[31m-      <DivItem>[m
+[31m-        <Link to = 'home'> home </Link>[m
+[31m-      </DivItem>[m
+[31m-[m
+[31m-      <DivItem>[m
+[31m-        <Link to = 'product'> Product </Link>[m
+[31m-      </DivItem>[m
+[31m-[m
+[31m-      <DivItem>[m
+[31m-          <DivActive> {props.data.name}  </DivActive>[m
+[31m-      </DivItem>[m
+[31m-      [m
+[31m-    </Div>[m
+[31m-  )[m
+[31m-}[m
+[31m-export default NavProCatPage[m
+\ No newline at end of file[m
+[1mdiff --git a/src/components/Navigation/NavProSingPage.js b/src/components/Navigation/NavProSingPage.js[m
+[1mdeleted file mode 100644[m
+[1mindex 872eb64..0000000[m
+[1m--- a/src/components/Navigation/NavProSingPage.js[m
+[1m+++ /dev/null[m
+[36m@@ -1,54 +0,0 @@[m
+[31m-import React from 'react'[m
+[31m-import {Link} from 'gatsby'[m
+[31m-import styled from 'styled-components'[m
+[31m-[m
+[31m-const Div = styled.div`[m
+[31m-  max-width: 2500px;[m
+[31m-  margin: 30px 0;[m
+[31m-  display: flex;[m
+[31m- [m
+[31m-`[m
+[31m-const DivItem = styled.div`[m
+[31m-  border-left: 1px solid;[m
+[31m-  padding: 0 15px;[m
+[31m-  a{[m
+[31m-    text-decoration:none;[m
+[31m-    color: #8f8f8f;[m
+[31m-    :hover{[m
+[31m-    color:#1B2B45;[m
+[31m-  }[m
+[31m-  }[m
+[31m-` [m
+[31m-const DivActive = styled.div`[m
+[31m-  color:#17949b;[m
+[31m-  font-weight: bold;[m
+[31m-`[m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-const NavProSingPage = (props) =>{[m
+[31m-  return([m
+[31m-    <Div> [m
+[31m-      <DivItem>[m
+[31m-        <Link to = 'home'> home </Link>[m
+[31m-      </DivItem>[m
+[31m-[m
+[31m-      <DivItem>[m
+[31m-        <Link to = 'product'> product </Link>[m
+[31m-      </DivItem>[m
+[31m-[m
+[31m-      <DivItem>[m
+[31m-        {props.data.productCategories.nodes.map(catItem=>{[m
+[31m-          return([m
+[31m-            <Link to = {decodeURI('product/'+catItem.slug)}> {catItem.name} </Link>[m
+[31m-          )[m
+[31m-        })}[m
+[31m-      </DivItem>[m
+[31m-      [m
+[31m-      <DivItem>[m
+[31m-          <DivActive> {props.data.name}  </DivActive>[m
+[31m-      </DivItem>[m
+[31m-    </Div>[m
+[31m-  )[m
+[31m-}[m
+[31m-export default NavProSingPage[m
+\ No newline at end of file[m
+[1mdiff --git a/src/components/Products/ProductItem.js b/src/components/Products/ProductItem.js[m
+[1mdeleted file mode 100644[m
+[1mindex 0a59f64..0000000[m
+[1m--- a/src/components/Products/ProductItem.js[m
+[1m+++ /dev/null[m
+[36m@@ -1,34 +0,0 @@[m
+[31m-import React, { Component } from 'react'[m
+[31m-import styled from 'styled-components'[m
+[31m-import { Link } from 'gatsby'[m
+[31m-[m
+[31m-class ProductItem extends Component {[m
+[31m-    render(){[m
+[31m-        //Style[m
+[31m-        const Img = styled.img`[m
+[31m-            max-width: 325px;[m
+[31m-            width: 100%;[m
+[31m-        `[m
+[31m-        //Fucntion[m
+[31m-        const { name, slug, id, regularPrice, image, productCategories } = this.props.products[m
+[31m-        const url = productCategories.nodes.map(catProduct=>{[m
+[31m-            return([m
+[31m-                decodeURI(catProduct.slug + '/' + slug)[m
+[31m-            )[m
+[31m-        })[m
+[31m-        [m
+[31m-        //Display[m
+[31m-        return([m
+[31m-            <div>[m
+[31m-                <Link key={id} to = {url}>[m
+[31m-                    <Img src={image.mediaItemUrl} alt={image.altText}/>[m
+[31m-                    <div> {name} </div>[m
+[31m-                    <div> {regularPrice} </div>[m
+[31m-                </Link>[m
+[31m-            </div>[m
+[31m-        )[m
+[31m-    }[m
+[31m-}[m
+[31m-[m
+[31m-[m
+[31m-export default ProductItem[m
+\ No newline at end of file[m
+[1mdiff --git a/src/components/Products/ProductItemHomePage.js b/src/components/Products/ProductItemHomePage.js[m
+[1mdeleted file mode 100644[m
+[1mindex 48a5244..0000000[m
+[1m--- a/src/components/Products/ProductItemHomePage.js[m
+[1m+++ /dev/null[m
+[36m@@ -1,72 +0,0 @@[m
+[31m-import React from 'react'[m
+[31m-import styled from 'styled-components'[m
+[31m-import { Link } from 'gatsby'[m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-const Img = styled.img`[m
+[31m-    max-width: 200px;[m
+[31m-    width: 100%;[m
+[31m-`[m
+[31m-// const Button = styled.button`[m
+[31m-//     background-color: #17949b;[m
+[31m-//     border: none;[m
+[31m-//     padding: 10px;[m
+[31m-//     border-radius: 0.5rem;[m
+[31m-//     margin-top: 20px;[m
+[31m-//     color: white;[m
+[31m-//     font-weight: bold;[m
+[31m-//     ${Button}:hover&{[m
+[31m-//         background-color: #42D0D8;[m
+[31m-//     }[m
+[31m-// `[m
+[31m-const Block = styled.div`[m
+[31m-    border-radius: 10px;[m
+[31m-    text-align:center;[m
+[31m-    padding:10px;[m
+[31m-    margin: 10px;[m
+[31m-    border: 1px solid #D5D8DC ;[m
+[31m-    :hover{[m
+[31m-        box-shadow: 0 10px 25px rgba(0,0,0,.2);[m
+[31m-        margin-top:-10px;[m
+[31m-    }[m
+[31m-    a{[m
+[31m-        text-decoration: none;[m
+[31m-        color:red;[m
+[31m-        font-weight:bold;[m
+[31m-        button{[m
+[31m-            background-color: #17949b;[m
+[31m-            border: none;[m
+[31m-            padding: 10px;[m
+[31m-            border-radius: 0.5rem;[m
+[31m-            margin-top: 20px;[m
+[31m-            color: white;[m
+[31m-            font-weight: bold;[m
+[31m-            :hover {[m
+[31m-            background-color: #42D0D8;[m
+[31m-            }[m
+[31m-        }[m
+[31m-    }[m
+[31m-`[m
+[31m-[m
+[31m-[m
+[31m-const ProductItemHomePage = (props) => {[m
+[31m-    const { name, regularPrice, slug, image, id, productCategories } = props.products[m
+[31m-    const url = productCategories.nodes.map(catProduct=>{[m
+[31m-        return([m
+[31m-            decodeURI('product/'+catProduct.slug + '/' + slug)[m
+[31m-        )[m
+[31m-    })[m
+[31m-[m
+[31m-    return([m
+[31m-        <Block>[m
+[31m-                    <Img src={image.mediaItemUrl} alt={image.altText}/>[m
+[31m-                    <div> {name} </div>[m
+[31m-                    <div> {regularPrice} </div>[m
+[31m-                    <Link key={id} to = {url}>[m
+[31m-                        <button> รายละเอียดสินค้า </button>[m
+[31m-                    </Link>[m
+[31m-        </Block>[m
+[31m-    )[m
+[31m-}[m
+[31m-export default ProductItemHomePage;[m
+\ No newline at end of file[m
+[1mdiff --git a/src/components/Products/ProductItemProductPage.js b/src/components/Products/ProductItemProductPage.js[m
+[1mdeleted file mode 100644[m
+[1mindex a1d61e7..0000000[m
+[1m--- a/src/components/Products/ProductItemProductPage.js[m
+[1m+++ /dev/null[m
+[36m@@ -1,87 +0,0 @@[m
+[31m-import React from 'react'[m
+[31m-import styled from 'styled-components'[m
+[31m-import { Link } from 'gatsby'[m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-//-------styled------------[m
+[31m-const Img = styled.img`[m
+[31m-    max-width: 150px;[m
+[31m-    width: 100%;[m
+[31m-`[m
+[31m-const BlockCartItem = styled.div`[m
+[31m-    display:flex;[m
+[31m-    flex-wrap:wrap;[m
+[31m-    align-items:center;[m
+[31m-    margin: 10px 0;[m
+[31m-    div{[m
+[31m-        text-align:center;[m
+[31m-        margin: 0 15px;[m
+[31m-        padding: 15px;[m
+[31m-    button{[m
+[31m-            background-color: #17949b;[m
+[31m-            border: none;[m
+[31m-            padding: 7px;[m
+[31m-            border-radius: 0.5rem;[m
+[31m-            margin-top: 20px;[m
+[31m-            color: white;[m
+[31m-            :hover{[m
+[31m-            background-color: #42D0D8;[m
+[31m-            }[m
+[31m-        }[m
+[31m-    }[m
+[31m-    @media all and (max-width: 500px){[m
+[31m-        justify-content:center;[m
+[31m-    }[m
+[31m-    [m
+[31m-`[m
+[31m-const Div = styled.div`[m
+[31m-    margin: 40px 0;[m
+[31m-        a{[m
+[31m-            text-decoration: none;[m
+[31m-            color: black;[m
+[31m-            :hover{[m
+[31m-            color:#17949b;[m
+[31m-        }[m
+[31m-[m
+[31m-    }[m
+[31m-`[m
+[31m-//---------endStyled-----------[m
+[31m-[m
+[31m-const ProductItemProductPage = (props) => {[m
+[31m-    const ShowProduct = () => {[m
+[31m-        return([m
+[31m-            props.data.wordPress.productCategories.nodes.map(cat => {[m
+[31m-                    if(cat.slug === "uncategorized"){[m
+[31m-                        return ''[m
+[31m-                    }else{[m
+[31m-                        return([m
+[31m-                            <Div>[m
+[31m-                                <Link to = {decodeURI('product/' + cat.slug)} key = {cat.id}> <h1>{cat.name}</h1> </Link>[m
+[31m-                                <BlockCartItem>[m
+[31m-                                        {cat.products.nodes.map(item=>{[m
+[31m-                                            return([m
+[31m-                                                  <div>[m
+[31m-                                                       <Link to = {decodeURI('product/' + cat.slug + '/' + item.slug)}>[m
+[31m-                                                            <Img src={item.image.mediaItemUrl}  />[m
+[31m-                                    

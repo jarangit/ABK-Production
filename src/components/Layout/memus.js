@@ -135,7 +135,7 @@ class MainMenu extends Component {
       <LayoutWrapper>
       <div>
         <Link to="/home">
-            {/* <LogoImg src={Logo}/>  */}Logo
+            {/* <LogoImg src={Logo}/>  */}Logohaha
         </Link>    
       </div>
       <div>

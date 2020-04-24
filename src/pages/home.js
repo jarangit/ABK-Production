@@ -7,18 +7,16 @@ import Layout from '../components/Layout/layout';
 import SEO from '../components/seo'
 
 
-class HomePage extends Component {
-    render(){
-        return(
-           <Layout>
-                        <SEO title = 'home'/>
-                        <JustWeb/>
-                        <ProductListHomePage/>
-                        <Promote/>
-                        <BlogListHomepage/>
-           </Layout>
-        )
-    }
+const HomePage = () => {
+    return(
+        <Layout>
+            <SEO title = 'home'/>
+            <JustWeb/>
+            <ProductListHomePage/>
+            <Promote/>
+            <BlogListHomepage/>
+        </Layout>
+    )
 }
 
-export default HomePage;
+export default HomePage

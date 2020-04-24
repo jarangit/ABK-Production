@@ -135,11 +135,7 @@ class MainMenu extends Component {
       <LayoutWrapper>
       <div>
         <Link to="/home">
-<<<<<<< HEAD
-//             <LogoImg src={Logo}/> 
-=======
             {/* <LogoImg src={Logo}/>  */}Logo
->>>>>>> de
         </Link>    
       </div>
       <div>
@@ -148,14 +144,14 @@ class MainMenu extends Component {
                     <a to ="#"><i class="fas fa-bars"></i></a>
                   </li>
               { props.wordPress.menu.menuItems.edges.map(item => {
-                const wpUrl = `http://localhost/Project/ABK/www/`
+                const wpUrl = `https://api.abk-store.com/`
                 const onlyPath = decodeURI( item.node.url.replace(wpUrl,``))   
                 return(
                   <li>
                       <Link key= {item.id} to = {`/${onlyPath}/`} > {item.node.label}</Link>
                             <div>
                                   {item.node.childItems.edges && item.node.childItems.edges.map(subItem => {
-                                    const wpUrlCatPro = `http://localhost/Project/ABK/www/category/`
+                                    const wpUrlCatPro = `https://api.abk-store.com/category/`
                                     const onlyPathSub = decodeURI( subItem.node.url.replace(wpUrlCatPro,``))
                                     if(subItem)
                                     return(

@@ -1,7 +1,7 @@
 import React from "react"
 import MainMenu from './memus'
 import Footer from './footer'
-import '../../lib/css/Layout.css'
+import './Layout.css'
 import '../../lib/fontawesome/css/all.css'
 import styled from 'styled-components'
 

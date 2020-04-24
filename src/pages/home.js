@@ -7,8 +7,7 @@ import Layout from '../components/Layout/layout';
 import SEO from '../components/seo'
 
 
-class HomePage extends Component {
-    render(){
+const HomePage = () =>  {
         return(
            <Layout>
                         <SEO title = 'home'/>
@@ -18,7 +17,6 @@ class HomePage extends Component {
                         <BlogListHomepage/>
            </Layout>
         )
-    }
 }
 
 export default HomePage;

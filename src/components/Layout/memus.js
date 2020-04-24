@@ -1,7 +1,7 @@
 import React, {Component, useState} from 'react'
 import { graphql, StaticQuery, Link } from 'gatsby'
 import styled from 'styled-components'
-import Logo from '../../images/logo/logo.png'
+// import Logo from '../../images/logo/logo.png'
 
 
 //--------Style--------
@@ -104,7 +104,7 @@ class MainMenu extends Component {
     <StaticQuery  query={ graphql`
     {
   wordPress {
-    menu(id: "TWVudToy") {
+    menu(id: "TWVudToxNg==") {
       name
       menuItems {
         edges {
@@ -135,7 +135,11 @@ class MainMenu extends Component {
       <LayoutWrapper>
       <div>
         <Link to="/home">
+<<<<<<< HEAD
 //             <LogoImg src={Logo}/> 
+=======
+            {/* <LogoImg src={Logo}/>  */}Logo
+>>>>>>> de
         </Link>    
       </div>
       <div>

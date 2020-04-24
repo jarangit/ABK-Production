@@ -1,10 +1,10 @@
 import React from 'react'
 import Layout from '../components/Layout/layout'
 import styled from 'styled-components'
-import BlogListHomepage from '../components/ฺBlog/BlogListHomePage'
-import BlogListCatPage from '../components/ฺBlog/BlogCat/BlogListCatPage'
+import BlogListHomepage from '../components/ฺBlog/blogListHomePage'
+import BlogListCatPage from '../components/ฺBlog/BlogCat/blogListCatPage'
 import AllProduct from '../components/product'
-import NavPage from '../components/Navigation/NavPage'
+import NavPage from '../components/Navigation/navpage'
 import SEO from '../components/seo'
 
 

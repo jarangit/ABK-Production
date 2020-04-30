@@ -32,12 +32,11 @@ const ProductListHomePage = () => {
                     regularPrice
                     slug
                     sku
-                    link
                     image {
                         mediaItemUrl
                         altText
                       }
-                      productCategories(first: 1)  {
+                      productCategories {
                         nodes {
                           slug
                         }

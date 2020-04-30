@@ -51,9 +51,8 @@ const Block = styled.div`
 
 
 const ProductItemHomePage = (props) => {
-    const { name, regularPrice, slug, image, id, productCategories} = props.products
+    const { name, regularPrice, slug, image, id, productCategories } = props.products
     const url = productCategories.nodes.map(catProduct=>{
-        console.log(catProduct.slug)
         return(
             decodeURI('product/'+catProduct.slug + '/' + slug)
         )

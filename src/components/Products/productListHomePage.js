@@ -36,7 +36,7 @@ const ProductListHomePage = () => {
                         mediaItemUrl
                         altText
                       }
-                      productCategories {
+                      productCategories(first: 1) {
                         nodes {
                           slug
                         }

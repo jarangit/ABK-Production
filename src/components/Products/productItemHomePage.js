@@ -64,7 +64,7 @@ const ProductItemHomePage = (props) => {
                     <div> {name} </div>
                     <div> {regularPrice} </div>
                     <Link key={id} to = {url}>
-                        <button> รายละเอียดสินค้า </button>
+                        <button> รายละเอียดสินค้า testes</button>
                     </Link>
         </Block>
     )

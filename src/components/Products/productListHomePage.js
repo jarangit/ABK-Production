@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql, StaticQuery } from 'gatsby'
 import styled from 'styled-components'
-import ProductItemHomePage from './ProductItemHomePage'
+import ProductItemHomePage from './productItemHomePage'
 
 
 

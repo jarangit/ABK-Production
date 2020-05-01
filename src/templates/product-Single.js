@@ -3,6 +3,7 @@ import Layout from '../components/Layout/layout'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 import NavProSingPage from '../components/Navigation/navprosingpage'
+import ModalOnClickSale from '../components/Modal/ModalOncClickSale'
 
 //-------------styled----------
 const LayoutWrapper = styled.div`
@@ -89,6 +90,7 @@ const ProductSingleTemplate = (data) =>{
         <Layout>
             <LayoutWrapper>
                 <NavProSingPage data = {data.pageContext} />
+                <ModalOnClickSale/>
                 <div>
                     {ShowProduct()}
                 </div>

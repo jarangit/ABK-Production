@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Layout from '../components/Layout/layout'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
@@ -54,6 +54,11 @@ const BlockButton = styled.div`
 const ProductSingleTemplate = (data) =>{
 
     const { name, regularPrice,description,image, productCategories } = data.pageContext
+    //useStae for modal 
+    const [openModal, SetOpenModal] = useState(true)    
+    //Func onClick opemModal
+    const FuncOpenModal = () => {SetOpenModal(!openModal)}
+    console.log(openModal)
     const ShowProduct = () => {
         return(
             <Div>
@@ -78,7 +83,7 @@ const ProductSingleTemplate = (data) =>{
                             <h4> ราคา {regularPrice} บาท </h4>
                         </div>
 
-                        <button > <h4>ติดต่อสั้งซื้อสินค้าggggg</h4> </button>
+                        <button onClick = {FuncOpenModal} > <h4>ติดต่อสั้งซื้อสินค้า</h4> </button>
                     </BlockButton>
 
                 </div>
@@ -90,7 +95,7 @@ const ProductSingleTemplate = (data) =>{
         <Layout>
             <LayoutWrapper>
                 <NavProSingPage data = {data.pageContext} />
-                <ModalOnClickSale/>
+                <ModalOnClickSale valueClick = {openModal} onClose={FuncOpenModal}/>
                 <div>
                     {ShowProduct()}
                 </div>

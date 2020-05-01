@@ -50,15 +50,15 @@ const ModalOnClickSale = (props) => {
 
     const ShowModal = () => {
         if (props.valueClick === true){
-            return 'test'
+            return ''
         }else{
             return(
-                <div>
+                <ModalSty>
                     <div>
                     <span onClick = {props.onClose}>x</span>
                         <h1>content</h1>
                     </div>
-                </div>
+                </ModalSty>
             )
         }
     }

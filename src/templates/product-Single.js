@@ -77,7 +77,7 @@ const ProductSingleTemplate = (data) =>{
                             <h4> ราคา {regularPrice} บาท </h4>
                         </div>
 
-                        <button > <h4>ติดต่อสั้งซื้อสินค้า</h4> </button>
+                        <button > <h4>ติดต่อสั้งซื้อสินค้าffff</h4> </button>
                     </BlockButton>
 
                 </div>

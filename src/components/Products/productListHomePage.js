@@ -33,14 +33,14 @@ const ProductListHomePage = () => {
                     slug
                     sku
                     image {
-                        mediaItemUrl
-                        altText
+                      mediaItemUrl
+                      altText
+                    }
+                    productCategories(first: 1) {
+                      nodes {
+                        slug
                       }
-                      productCategories {
-                        nodes {
-                          slug
-                        }
-                      }
+                    }
                   }
                 }
               }

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components'
+import {Link} from 'gatsby'
 
 
 const ModalSty = styled.div`
@@ -16,10 +17,13 @@ const ModalSty = styled.div`
   div{
     background-color: #fefefe;
     margin: auto;
-    padding: 20px;
+    padding: 10px 20px;
     width: 50%;
     border-radius: 0.5rem;
     /* text-align:center; */
+    h1{
+        text-align:center;
+    }
 
     span{
         color: #aaaaaa;
@@ -34,8 +38,12 @@ const ModalSty = styled.div`
                 display:flex;
                 /* display:inline-block; */
                 img{
-                    margin: 5px;
+                    margin: 5px 10px;
                     width:15%;
+                }
+                a{
+                    list-style:none;
+                    display:flex;
                 }
             }
         }
@@ -65,20 +73,28 @@ const ModalOnClickSale = (props) => {
                     <div>
                         <ul>
                             <li>
+                                <a href = "https://line.me/R/ti/p/%40426ovedm" target="_blank" >
                                 <img src="http://api.abk-store.com/wp-content/uploads/2020/05/f7e8c32d420b6da05f807488ebf8a1e5.png" />
                                 <p>Line</p>
+                                </a>
                             </li>
                             <li>
+                                <a href = "https://www.facebook.com/Jaranservice" target="_blank">
                                 <img src="http://api.abk-store.com/wp-content/uploads/2020/05/Facebook_Logo_2019.png" />
                                 <p>Facebook</p>
+                               </a>
                             </li>
                             <li>
+                                <a href="mailto: abk.contactus@gmail.com" >
                                 <img src="http://api.abk-store.com/wp-content/uploads/2020/05/mail.png" />
-                                <p>Email</p>
+                                <p>abk.contactus@gmail.com</p>
+                                </a>
                             </li>
                             <li>
+                                <a href ="tel:0895937868" >
                                 <img src="http://api.abk-store.com/wp-content/uploads/2020/05/79dbd38bce56b49fdc7a04d3b01dee41.png" />
-                                <p>Tel</p>
+                                <p>08-959-37868</p>
+                                </a>
                             </li>
                         </ul>
                     </div>

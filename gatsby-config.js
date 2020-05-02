@@ -3,9 +3,10 @@ require("dotenv").config({
 })
 module.exports = {
   siteMetadata: {
-    title: `ABK-Store`,
+    title: `abk-store`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
+    images: `http://api.abk-store.com/wp-content/uploads/2020/04/logo.png`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -39,7 +40,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        // icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/logo/logo.PNG`, // This path is relative to the root of the site.
       },
     },
 

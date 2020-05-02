@@ -52,7 +52,7 @@ const ModalSty = styled.div`
             height: 50px;
         }
     }
-    @media all and  (max-width: 650px){
+    @media all and  (max-width: 900px){
         div{
             width:85%;
         }

@@ -188,7 +188,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
             const deCode = decodeURI(edge.slug);
             createPage({
-              path: '/blog/'+deCode,
+              path: '/category/'+deCode,
               component: CatTemplate,
               context: edge,
             })

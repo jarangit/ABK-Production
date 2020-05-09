@@ -65,7 +65,7 @@ const PageTemplate = (data) => {
             return(
                 <BlogListHomepage/>
             )
-        }else if(pageId === "cGFnZTo5MA=="){
+        }else if(pageId === "cGFnZToyNw=="){
             return (
                 <AllProduct/>
             )

@@ -53,7 +53,7 @@ const Promote = () => {
                
                 <Column1>
                 <div>
-                    <Img src=""/>
+                    <Img src="https://api.abk-store.com/wp-content/uploads/2020/05/pinion-640484-scaled.jpg"/>
                 </div>
                 </Column1>
                 <Column1>
@@ -62,7 +62,7 @@ const Promote = () => {
                                 copyright law to remove restrictions on distributing copies and modified versions of a work.
                                 [15] The aim of 
                     </div>
-                    <LinkButt to ='product' key="#"> 
+                    <LinkButt to ='สินค้าของเรา' key="#"> 
                                     <button> เยี่ยมชมสินค้า  </button>
                                 </LinkButt> 
                 </Column1>           

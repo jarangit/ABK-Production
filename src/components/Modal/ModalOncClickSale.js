@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components'
-import {Link} from 'gatsby'
 
 
 const ModalSty = styled.div`
@@ -17,7 +16,7 @@ const ModalSty = styled.div`
   div{
     background-color: #fefefe;
     margin: auto;
-    padding: 10px 20px;
+    padding: 10px 50px;
     width: 50%;
     border-radius: 0.5rem;
     /* text-align:center; */
@@ -55,6 +54,7 @@ const ModalSty = styled.div`
     @media all and  (max-width: 900px){
         div{
             width:85%;
+            padding: 10px 20px;
         }
     }
     `
@@ -66,7 +66,7 @@ const ModalOnClickSale = (props) => {
         }else{
             return(
                 <ModalSty>
-                    <div>
+                    <div >
                     <span onClick = {props.onClose}>x</span>
                         <h1>ติดต่อเรา</h1>
                         <p>หากต้องสอบถามเพิ่มเกี่ยวกับสินค้าของเราหรือต้องการสั้งซื้อสินค้ากรูณาติดต่อช่องทาวต่อไปนี้คะ</p>

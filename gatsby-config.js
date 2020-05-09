@@ -6,7 +6,7 @@ module.exports = {
     title: `abk-store`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
-    images: `http://api.abk-store.com/wp-content/uploads/2020/04/logo.png`,
+    images: `https://api.abk-store.com/wp-content/uploads/2020/04/logo.png`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -17,7 +17,7 @@ module.exports = {
       options: {
         typeName: `WordPress`,
         fieldName: `wordPress`,
-        url: `http://api.abk-store.com/graphql`,
+        url: `https://api.abk-store.com/graphql`,
         // refetchInterval:60
        },
       },

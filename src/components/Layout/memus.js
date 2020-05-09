@@ -135,7 +135,7 @@ class MainMenu extends Component {
       <LayoutWrapper>
       <div>
         <Link to="/home">
-            <LogoImg src="http://api.abk-store.com/wp-content/uploads/2020/04/logo.png"/> 
+            <LogoImg src="https://api.abk-store.com/wp-content/uploads/2020/04/logo.png"/> 
         </Link>    
       </div>
       <div>
@@ -144,7 +144,7 @@ class MainMenu extends Component {
                     <a to ="#" key=""><i class="fas fa-bars"></i></a>
                   </li>
               { props.wordPress.menu.menuItems.edges.map(item => {
-                const wpUrl = `http://api.abk-store.com/`
+                const wpUrl = `https://api.abk-store.com/`
                 const onlyPath = decodeURI( item.node.url.replace(wpUrl,``))   
                 return(
                   <li>

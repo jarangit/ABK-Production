@@ -62,7 +62,7 @@ const Promote = () => {
                                 copyright law to remove restrictions on distributing copies and modified versions of a work.
                                 [15] The aim of 
                     </div>
-                    <LinkButt to ='สินค้าของเรา' key="#"> 
+                    <LinkButt to ='product' key="#"> 
                                     <button> เยี่ยมชมสินค้า  </button>
                                 </LinkButt> 
                 </Column1>           

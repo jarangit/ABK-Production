@@ -205,18 +205,6 @@ exports.createPages = async ({ graphql, actions }) => {
               component: ProducCatTemplate,
               context: edge,
             })
-            // const ProducCatChilTemplate = path.resolve(`src/templates/Product-Category-children.js`)
-            // result.data.wordPress.productCategories.nodes.forEach(edge => {
-              // edge.children.nodes.map(edgeChill=>{
-  
-              //   const deCodeChil = decodeURI(edgeChill.slug);
-              //   createPage({
-              //     path: '/หมวดสินค้า/'+ deCodeMain + '/' + deCodeChil,
-              //     component: ProducCatTemplate,
-              //     context: edgeChill,
-              //   })
-              // })
-            // })
           })
 
       

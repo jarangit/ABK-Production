@@ -13,12 +13,16 @@ import React from 'react'
 
 //------------------------------------------------------------
 const SlideHeader = (props) => {
-  console.log(props.testProps)
-    return(
-      <div>
-        {props.testProps}jaran
-      </div>
-    )
+  // console.log(props.dataImg.testProps.mediaItemUrl)
+    if(props.dataImgToSlide === false){
+      return 'ไม่มีเว้ย'
+    }else{
+      return(
+        <div>
+          <img src= {props.dataImgToSlide} width = "100%" />
+        </div>
+      )
+    }
     
 }
 

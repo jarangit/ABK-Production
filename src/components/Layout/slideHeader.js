@@ -1,5 +1,5 @@
 import React from 'react'
-import { Location } from '@reach/router'
+import {Link} from 'gatsby'
 
 
 
@@ -14,10 +14,10 @@ import { Location } from '@reach/router'
 
 //------------------------------------------------------------
 const SlideHeader = (props) => {
-
-    if(props.dataImgToSlide === false){
+    const {dataImgToSlide, pathname} = props
+    if(dataImgToSlide === false){
       return 'ไม่มีเว้ย'
-    }else if(window.location.href === "https://www.abk-store.com"){
+    }else if(pathname === '/'){
       return(
         <div>
           <img src= "https://api.abk-store.com/wp-content/uploads/2020/05/welding-2178127-scaled.jpg" width = "100%" />

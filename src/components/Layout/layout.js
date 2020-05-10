@@ -5,6 +5,7 @@ import '../../lib/css/Layout.css'
 import '../../lib/fontawesome/css/all.css'
 import styled from 'styled-components'
 import SlideHeader from '../Layout/slideHeader'
+import { globalHistory } from "@reach/router"
 
 
 const LayoutWrapper = styled.div`
@@ -17,11 +18,11 @@ const LayoutWrapper = styled.div`
 `
 
 const Layout = ({ children, ...dataImg}) => {
-  console.log(dataImg.dataImg)
+  const pathName = globalHistory.location.pathname
   return(
     <div>
       <MainMenu/>
-      <SlideHeader dataImgToSlide = {dataImg.dataImg}/>
+      <SlideHeader dataImgToSlide = {dataImg.dataImg} pathname = {pathName}/>
         <LayoutWrapper>
             {children}
         </LayoutWrapper>

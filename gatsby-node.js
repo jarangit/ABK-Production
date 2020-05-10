@@ -10,7 +10,7 @@ const path = require(`path`)
 // Will create pages for WordPress posts (route : /post/{slug})
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage, createRedirect } = actions
-  createRedirect({ fromPath: '/', toPath: '/home/', redirectInBrowser: true, inPermanent: true })
+  // createRedirect({ fromPath: '/', toPath: '', redirectInBrowser: true, inPermanent: true })
 
     const result =  await graphql(
       `

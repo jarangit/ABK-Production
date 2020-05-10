@@ -9,13 +9,13 @@ import SEO from '../components/seo'
 
 const HomePage = () =>  {
         return(
-           <Layout>
+           <div>
                         <SEO title = 'ABK'/>
                         <JustWeb/>
                         <ProductListHomePage/>
                         <Promote/>
                         <BlogListHomepage/>
-           </Layout>
+           </div>
         )
 }
 

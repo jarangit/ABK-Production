@@ -134,7 +134,7 @@ class MainMenu extends Component {
       <MenusItem>
       <LayoutWrapper>
       <div>
-        <Link to="/home">
+        <Link to="/">
             <LogoImg src="https://api.abk-store.com/wp-content/uploads/2020/04/logo.png"/> 
         </Link>    
       </div>

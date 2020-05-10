@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link} from 'gatsby'
+import { globalHistory } from "@reach/router"
 
 
 
@@ -14,10 +14,12 @@ import {Link} from 'gatsby'
 
 //------------------------------------------------------------
 const SlideHeader = (props) => {
-    const {dataImgToSlide, pathname} = props
+   const pathName = globalHistory.location.pathname
+    const {dataImgToSlide} = props
+    console.log(pathName)
     if(dataImgToSlide === false){
       return 'ไม่มีเว้ย'
-    }else if(pathname === '/'){
+    }else if(pathName === '/'){
       return(
         <div>
           <img src= "https://api.abk-store.com/wp-content/uploads/2020/05/welding-2178127.png" width = "100%" />

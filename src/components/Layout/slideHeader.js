@@ -20,7 +20,7 @@ const SlideHeader = (props) => {
     }else if(pathname === '/'){
       return(
         <div>
-          <img src= "https://api.abk-store.com/wp-content/uploads/2020/05/welding-2178127-scaled.jpg" width = "100%" />
+          <img src= "https://api.abk-store.com/wp-content/uploads/2020/05/welding-2178127.png" width = "100%" />
         </div>
       )
     }else{

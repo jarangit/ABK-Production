@@ -30,7 +30,7 @@ const NavProSingPage = (props) =>{
   return(
     <Div> 
       <DivItem>
-        <Link to = 'home'> home </Link>
+        <Link to = '/'> home </Link>
       </DivItem>
 
       <DivItem>

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Location } from '@reach/router'
 
 
 
@@ -13,14 +14,20 @@ import React from 'react'
 
 //------------------------------------------------------------
 const SlideHeader = (props) => {
-  // console.log(props.dataImg.testProps.mediaItemUrl)
+
     if(props.dataImgToSlide === false){
       return 'ไม่มีเว้ย'
+    }else if(window.location.href === "https://www.abk-store.com"){
+      return(
+        <div>
+          <img src= "https://api.abk-store.com/wp-content/uploads/2020/05/welding-2178127-scaled.jpg" width = "100%" />
+        </div>
+      )
     }else{
       return(
         <div>
-          <img src= {props.dataImgToSlide} width = "100%" />
-        </div>
+        <img src= {props.dataImgToSlide} width = "100%" />
+      </div>
       )
     }
     

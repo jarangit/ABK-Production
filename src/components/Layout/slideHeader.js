@@ -13,20 +13,20 @@ import { globalHistory } from "@reach/router"
 
 
 //------------------------------------------------------------
-const SlideHeader = (props) => {
-    const pathName = globalHistory.location.pathname
-    const {dataImgToSlide} = props
+const  SlideHeader =   (props) => {
+    const pathName =  globalHistory.location.pathname
+    const {dataImgToSlide} =  props
 
-    if(dataImgToSlide != undefined){
-      return(
+     if ( dataImgToSlide != undefined){
+       return  (
         <div>
-          <img src= {props.dataImgToSlide} width = "100%" />
+          <img src= {props.dataImgToSlide} width = "100%" alt='' />
         </div>
       )
     }else if(pathName === '/'){
       return(
         <div>
-          <img src= "https://api.abk-store.com/wp-content/uploads/2020/05/welding-2178127.png" width = "100%" />
+          <img src= "https://api.abk-store.com/wp-content/uploads/2020/05/welding-2178127.png" width = "100%" alt=''/>
         </div>
       )
     }else{

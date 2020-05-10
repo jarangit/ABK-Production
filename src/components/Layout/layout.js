@@ -18,11 +18,10 @@ const LayoutWrapper = styled.div`
 `
 
 const Layout = ({ children, ...dataImg}) => {
-  const pathName = globalHistory.location.pathname
   return(
     <div>
       <MainMenu/>
-      <SlideHeader dataImgToSlide = {dataImg.dataImg} pathname = {pathName}/>
+      {/* <SlideHeader dataImgToSlide = {dataImg.dataImg}/> */}
         <LayoutWrapper>
             {children}
         </LayoutWrapper>

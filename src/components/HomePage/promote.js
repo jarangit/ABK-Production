@@ -58,9 +58,7 @@ const Promote = () => {
                 </Column1>
                 <Column1>
                     <div>
-                    Copyleft is a play on the word copyright and describes the practice of using 
-                                copyright law to remove restrictions on distributing copies and modified versions of a work.
-                                [15] The aim of 
+                        บริษัทเป็นผู้ผลิตและส่งออกผลิตภัณฑ์สับปะรดบรรจุกระป๋อง ผลไม้รวมบรรจุกระป๋อง น้ำสับปะรดเข้มข้นบรรจุในถุงปลอดเชื้อ ผลไม้ตามฤดูกาล ภายใต้เครื่องหมายการค้าของลูกค้าที่สำคัญๆในต่างประเทศ และภายใต้เครื่องหมายการค้าของบริษัท “SIAM FOOD” ซึ่งเป็นที่รู้จักและเชื่อถือได้ของลูกค้ามากว่า 49 ปี บริษัทมีไร่และโรงงานสับปะรดอยู่ที่จังหวัดชลบุรี
                     </div>
                     <LinkButt to ='product' key="#"> 
                                     <button> เยี่ยมชมสินค้า  </button>

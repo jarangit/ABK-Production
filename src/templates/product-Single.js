@@ -51,23 +51,24 @@ const BlockButton = styled.div`
     }
 `
 //----------endstyle----------
-const ProductSingleTemplate = (data) =>{
+const ProductSingleTemplate =  (data) =>{
 
-    const { name, regularPrice,description,image, productCategories } = data.pageContext
+    const { name, regularPrice,description,image, productCategories } =  data.pageContext
     //useStae for modal 
     const [openModal, SetOpenModal] = useState(true)    
     //Func onClick opemModal
     const FuncOpenModal = () => {SetOpenModal(!openModal)}
     console.log(description)
-    const ShowProduct = () => {
-        return(
+    const ShowProduct  =   () => {
+         return(
             <Div>
                 <BlockImg>
                     <Img src={image.mediaItemUrl} alt={image.altText}/>
                 </BlockImg>
                 <div>
                      <h1> {name} </h1>
-                    <p dangerouslySetInnerHTML={{__html: description}} ></p>
+                    {/* <p dangerouslySetInnerHTML={{__html: description}} ></p> */}
+                    <p> {description} </p>
 
                     <BlockButton>
 
@@ -91,15 +92,13 @@ const ProductSingleTemplate = (data) =>{
             </Div>
         )
     }
-    return(
+    return (
         <Layout>
-            <LayoutWrapper>
                 <NavProSingPage data = {data.pageContext} />
                 <ModalOnClickSale valueClick = {openModal} onClose={FuncOpenModal}/>
                 <div>
                     {ShowProduct()}
                 </div>
-            </LayoutWrapper>
         </Layout>
     )
 }

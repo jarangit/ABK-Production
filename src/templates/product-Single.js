@@ -58,7 +58,7 @@ const ProductSingleTemplate = (data) =>{
     const [openModal, SetOpenModal] = useState(true)    
     //Func onClick opemModal
     const FuncOpenModal = () => {SetOpenModal(!openModal)}
-    console.log(openModal)
+    console.log(description)
     const ShowProduct = () => {
         return(
             <Div>

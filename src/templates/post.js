@@ -29,8 +29,8 @@ export default ({pageContext}) => {
                     <SEO title = {pageContext.title}/>
                 {/* <NavPost data = {pageContext} /> */}
                 <Div>
-                    <h2 dangerouslySetInnerHTML= {{__html: pageContext.title}} />
-                    <div dangerouslySetInnerHTML={{__html: pageContext.content}}/>
+                    <h2 key={pageContext.title} dangerouslySetInnerHTML= {{__html: pageContext.title}} />
+                    <div key={pageContext.content} dangerouslySetInnerHTML={{__html: pageContext.content}}/>
                 </Div>
         </Layout>
      </div>

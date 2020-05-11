@@ -45,8 +45,8 @@ const BlogItemHomePage = (props) => {
                         <BlogItem>
                         <Img src= {featuredImage.mediaItemUrl} alt={featuredImage.altText} />
                         </BlogItem>
-                        <h3 dangerouslySetInnerHTML = {{__html: title}} />
-                        <div dangerouslySetInnerHTML = {{__html: excerpt}} />
+                        <h3 key={title} dangerouslySetInnerHTML = {{__html: title}} />
+                        <div key={excerpt} dangerouslySetInnerHTML = {{__html: excerpt}} />
                     </LinkItem>
             </Block>
     )

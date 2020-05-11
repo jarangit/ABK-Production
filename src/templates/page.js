@@ -52,7 +52,7 @@ const PageTemplate = (data) => {
                                 <Block>
                                 <NavPage data = {data.pageContext}/>
                                     <h1> {data.pageContext.title} </h1>
-                                    <div dangerouslySetInnerHTML={{__html: data.pageContext.content}}/>
+                                    <div key={data.pageContext.content} dangerouslySetInnerHTML={{__html: data.pageContext.content}}/>
                                     <div> {ShowBlogList()} </div>
                                 </Block>
                         </Layout>

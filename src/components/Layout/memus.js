@@ -141,7 +141,7 @@ class MainMenu extends Component {
       <div>
           <UlMain className = { navOpen ? 'active' : ''}>
                   <li  className="toggle" onClick = { () => { setNavOpen(!navOpen) } }>
-                    <a to ="#" key=""><i class="fas fa-bars"></i></a>
+                    <a to ="#" key="navOpen"><i className="fas fa-bars"></i></a>
                   </li>
               { props.wordPress.menu.menuItems.edges.map(item => {
                 const wpUrl = `https://api.abk-store.com/`

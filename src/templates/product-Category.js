@@ -90,7 +90,7 @@ const ProductCatTemplate = (data) => {
         <Layout>
                 <Div>
                     <NavProCatPage data = {data.pageContext} />
-                     <p dangerouslySetInnerHTML={{__html: description}} />
+                     <p key={description} dangerouslySetInnerHTML={{__html: description}} />
                      <h1> {name} </h1>
                      <BlockCartItem>
                          {ShowProduct()}

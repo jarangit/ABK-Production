@@ -58,8 +58,8 @@ export default ({pageContext}) => {
                                     <BlockImgItem>
                                         <Img src =  {catItem.featuredImage.mediaItemUrl} />
                                     </BlockImgItem>
-                                    <h4 className="entry-title" dangerouslySetInnerHTML= {{__html: catItem.title}}/>
-                                    <p dangerouslySetInnerHTML= {{__html: catItem.excerpt}} />
+                                    <h4 key={catItem.title} className="entry-title" dangerouslySetInnerHTML= {{__html: catItem.title}}/>
+                                    <p key={catItem.excerpt} dangerouslySetInnerHTML= {{__html: catItem.excerpt}} />
                             </BlockItem>
                         </Link>
              ))}

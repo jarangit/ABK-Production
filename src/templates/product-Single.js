@@ -53,7 +53,7 @@ const BlockButton = styled.div`
 //----------endstyle----------
 const ProductSingleTemplate =  (data) =>{
 
-    const { name, regularPrice,description,image, productCategories } =  data.pageContext
+    const { name, regularPrice,description,image, productCategories, id } =  data.pageContext
     //useStae for modal 
     const [openModal, SetOpenModal] = useState(true)    
     //Func onClick opemModal
@@ -67,7 +67,7 @@ const ProductSingleTemplate =  (data) =>{
                 </BlockImg>
                 <div>
                      <h1> {name} </h1>
-                    <div key={name} dangerouslySetInnerHTML={{__html: description}} />
+                    <div key={id} dangerouslySetInnerHTML={{__html: description}} />
                     {/* <p> {description} </p> */}
 
                     <BlockButton>

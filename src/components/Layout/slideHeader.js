@@ -20,13 +20,13 @@ const  SlideHeader =   (props) => {
      if ( dataImgToSlide != undefined){
        return  (
         <div>
-          <img src= {props.dataImgToSlide} width = "100%" alt='' />
+          <img src= {props.dataImgToSlide} width = "100%" alt='หหห' />
         </div>
       )
     }else if(pathName === '/'){
       return(
         <div>
-          <img src= "https://api.abk-store.com/wp-content/uploads/2020/05/welding-2178127.png" width = "100%" alt=''/>
+          <img src= "https://api.abk-store.com/wp-content/uploads/2020/05/welding-2178127.png" width = "100%" alt='หหห'/>
         </div>
       )
     }else{

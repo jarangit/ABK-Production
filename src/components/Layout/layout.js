@@ -21,7 +21,7 @@ const Layout = ({ children, ...dataImg}) => {
   return(
     <div>
       <MainMenu/>
-      {/* <SlideHeader dataImgToSlide = {dataImg.dataImg}/> */}
+      <SlideHeader dataImgToSlide = {dataImg.dataImg}/>
         <LayoutWrapper>
             {children}
         </LayoutWrapper>

@@ -50,7 +50,7 @@ export default ({pageContext}) => {
     return (
      <Layout>
          <h1>{name}</h1>
-         <p dangerouslySetInnerHTML={{__html: description}} />
+         <p key={description} dangerouslySetInnerHTML={{__html: description}} />
          <GridBlock>
              {posts.nodes.map(catItem => (
                         <Link key={catItem.id} to = {decodeURI(slug+'/'+catItem.slug)}> 

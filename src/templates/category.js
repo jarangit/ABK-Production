@@ -59,7 +59,7 @@ export default (data) => {
                                         <Img src =  {catItem.featuredImage.mediaItemUrl} />
                                     </BlockImgItem>
                                     <h4 key={catItem.title} className="entry-title" dangerouslySetInnerHTML= {{__html: catItem.title}}/>
-                                    <p key={catItem.excerpt} dangerouslySetInnerHTML= {{__html: catItem.excerpt}} />
+                                    <div key={catItem.excerpt} dangerouslySetInnerHTML= {{__html: catItem.excerpt}} />
                             </BlockItem>
                         </Link>
              ))}

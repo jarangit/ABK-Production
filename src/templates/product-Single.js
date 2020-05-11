@@ -67,8 +67,8 @@ const ProductSingleTemplate =  (data) =>{
                 </BlockImg>
                 <div>
                      <h1> {name} </h1>
-                    {/* <p dangerouslySetInnerHTML={{__html: description}} ></p> */}
-                    <p> {description} </p>
+                    <div key={name} dangerouslySetInnerHTML={{__html: description}} />
+                    {/* <p> {description} </p> */}
 
                     <BlockButton>
 

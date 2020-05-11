@@ -37,7 +37,7 @@ const GridBlock = styled.div`
             font-size: 1.2em;
             color: #333333;
             :hover{
-            color:#17949b;
+            color:red;
             }
 
     }
@@ -45,8 +45,8 @@ const GridBlock = styled.div`
 `
 
 
-export default ({pageContext}) => {
-    const {name, slug, posts,description,} = pageContext
+export default (data) => {
+    const {name, slug, posts,description,} = data.pageContext
     return (
      <Layout>
          <h1>{name}</h1>

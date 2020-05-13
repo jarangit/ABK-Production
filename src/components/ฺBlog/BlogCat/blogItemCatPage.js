@@ -7,13 +7,6 @@ import {Link} from 'gatsby'
 const Img = styled.img`
 max-width: 325px;
 width: 100%;
-
-`
-
-const BlogItem = styled.div`
-    max-width: 325px;
-    height: 150px;
-    overflow: hidden;
 `
 
 const Block = styled.div`
@@ -24,36 +17,43 @@ const Block = styled.div`
     overflow: hidden;
     border-radius:10px;
     :hover{
-        box-shadow: 5px 5px 5px 5px rgba(0,0,0,.2);
+        a{
+            color:#17949b;
+        }
     }
-    
     a{
-    text-decoration: none;
-    color: black;
-    :hover{
-        color:#17949b;
+        text-decoration: none;
+        color: black;
     }
-    
-  }
-`
+    div{
+        max-width: 325px;
+        height: 150px;
+        overflow: hidden;
+        img{
+            max-width: 325px;
+            width: 100%;
+        }
+    }
+    p{
+        margin: 0;
+    }
+    `
 
 
 
 const BlogItemCatPage = (props) => {
-
-    const { title, excerpt, featuredImage, id, slug} = props.blogPosts  
+    const {id, slug, featuredImage, title, excerpt,categories} = props.itemData
+    console.log(categories.nodes[0].slug)
     return (
-                <Block>
-                    <Link to = {decodeURI(props.catData.slug + "/" + slug)} key = {id} >
-                        <BlogItem>
-                        <Img src= {featuredImage.mediaItemUrl} alt={featuredImage.altText} />
-                        </BlogItem>
+            <Block>
+                <Link key={id} to = {decodeURI(categories.nodes[0].slug + '/' + slug)}> 
                         <div>
-                        <h3 key={title} dangerouslySetInnerHTML = {{__html: title}} />
-                        <div key={excerpt} dangerouslySetInnerHTML = {{__html: excerpt}} />
+                            <Img src =  {featuredImage.mediaItemUrl} />
                         </div>
-                    </Link>
-                </Block>
+                        <h4 key={title} className="entry-title" dangerouslySetInnerHTML= {{__html: title}}/>
+                        <div key={excerpt} dangerouslySetInnerHTML= {{__html: excerpt}} />
+                </Link>
+            </Block>
     )
 }
 export default BlogItemCatPage

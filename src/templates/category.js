@@ -2,7 +2,7 @@ import React from 'react'
 import Layout from '../components/Layout/layout'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
-
+import BlogListCatPage from '../components/ฺBlog/BlogCat/blogListCatPage'
 
 //---------Style
 const Img = styled.img`
@@ -51,7 +51,8 @@ export default (data) => {
      <Layout>
          <h1>{name}</h1>
          <p key={description} dangerouslySetInnerHTML={{__html: description}} />
-         <Block>
+                <BlogListCatPage catItemData = {posts}/>
+         {/* <Block>
             {posts.nodes.map(catItem => (
                         <Link key={catItem.id} to = {decodeURI(slug+'/'+catItem.slug)}> 
                                     <div>
@@ -61,7 +62,7 @@ export default (data) => {
                                     <div key={catItem.excerpt} dangerouslySetInnerHTML= {{__html: catItem.excerpt}} />
                         </Link>
              ))}
-         </Block>
+         </Block> */}
      </Layout>
     )
 }

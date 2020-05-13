@@ -67,6 +67,11 @@ exports.createPages = async ({ graphql, actions }) => {
                   slug
                   id
                   excerpt
+                  categories {
+                    nodes {
+                      slug
+                    }
+                  }
                   featuredImage {
                     mediaItemUrl
                   }

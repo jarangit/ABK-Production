@@ -8,14 +8,6 @@ display:flex;
 flex-wrap:wrap;
 margin: 0 auto;
 `
-const Div = styled.div`
-  margin: 80px 0;
-  @media all and (max-width: 870px){
-    div{
-      justify-content:center;
-    }
-  }
-`
 const BlogListHomepage = () => {
     return (
         <StaticQuery query =  {graphql `
@@ -58,14 +50,12 @@ const BlogListHomepage = () => {
             }
 //--------display------------
             return(
-              <Div>
+              <div>
                 <h1> My Custommer </h1>
-                  <div>
                   <BlogGrid>
                       {ShowBlog()}
                   </BlogGrid>
-                  </div>
-              </Div>
+              </div>
             )
         }}
         />

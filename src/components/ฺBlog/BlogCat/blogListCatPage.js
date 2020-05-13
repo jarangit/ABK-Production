@@ -59,11 +59,11 @@ const BlogListCatPage = () => {
                         return(
                         <div>
                              <Link to={'blog/' + cat.slug}> <h1> {cat.name} </h1> </Link>
-                             <BlogGrid>
+                             <div>
                                     { cat.posts.nodes.map(posts =>(
                                     <BlogItemCatPage blogPosts = {posts}  catData = {cat} nameCat = {cat.name}/>
                                     ))}
-                            </BlogGrid>
+                            </div>
                         </div>
                         ) 
                     }
@@ -72,9 +72,9 @@ const BlogListCatPage = () => {
             }
 //--------display------------
             return(
-              <Div>
+              <div>
                       {ShowBlog()}
-              </Div>
+              </div>
             )
         }}
         />

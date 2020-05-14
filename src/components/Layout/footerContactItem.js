@@ -43,7 +43,7 @@ const FooterContactItem  =() => {
                             edges.menuItems.nodes.map(items=> {
                                 return(
                                     <Blog>
-                                        <a  href = {items.url} > {items.label} </a>
+                                        <Link key = {items.id} to = {items.url} > {items.label} </Link>
                                     </Blog>
                                 )
                             })

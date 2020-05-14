@@ -6,9 +6,6 @@ import styled from 'styled-components'
 const Div = styled.div`
   text-align:center;
   margin: 40px 0 ;
-  h1{
-    font-size: 140%;
-  }
 `
 
 

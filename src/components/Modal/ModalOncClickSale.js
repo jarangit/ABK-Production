@@ -80,7 +80,7 @@ const ModalOnClickSale = (props) => {
                             </li>
                             <li>
                                 <a href = "https://www.facebook.com/Jaranservice" target="_blank">
-                                <img src="http://api.abk-store.com/wp-content/uploads/2020/05/Facebook_Logo_2019.png" />
+                                <img src="https://api.abk-store.com/wp-content/uploads/2020/05/Facebook_Logo_2019.png" />
                                 <p>Facebook</p>
                                </a>
                             </li>

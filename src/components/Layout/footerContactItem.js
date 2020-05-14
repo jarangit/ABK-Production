@@ -43,7 +43,7 @@ const FooterContactItem  =() => {
                                 console.log(items.url)
                                 return(
                                     <Blog>
-                                        <a href ={items.url}> {items.label} </a>
+                                        <a href ={items.url} target="_blank"> {items.label} </a>
                                     </Blog>
                                 )
                             })

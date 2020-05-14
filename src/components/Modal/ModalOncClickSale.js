@@ -38,7 +38,7 @@ const ModalSty = styled.div`
                 /* display:inline-block; */
                 img{
                     margin: 5px 10px;
-                    width:50px;
+                    width:15%;
                 }
                 a{
                     list-style:none;
@@ -74,25 +74,25 @@ const ModalOnClickSale = (props) => {
                         <ul>
                             <li>
                                 <a href = "https://line.me/R/ti/p/%40426ovedm" target="_blank" >
-                                <img src="https://api.abk-store.com/wp-content/uploads/2020/05/f7e8c32d420b6da05f807488ebf8a1e5.png" alt="line"/>
+                                <img src="https://api.abk-store.com/wp-content/uploads/2020/05/f7e8c32d420b6da05f807488ebf8a1e5.png" />
                                 <p>Line</p>
                                 </a>
                             </li>
                             <li>
                                 <a href = "https://www.facebook.com/Jaranservice" target="_blank">
-                                <img src="https://api.abk-store.com/wp-content/uploads/2020/05/Facebook_Logo_2019.png" alt="facebok"/>
+                                <img src="https://api.abk-store.com/wp-content/uploads/2020/05/Facebook_Logo_2019.png" />
                                 <p>Facebook</p>
                                </a>
                             </li>
                             <li>
                                 <a href="mailto: abk.contactus@gmail.com" >
-                                <img src="https://api.abk-store.com/wp-content/uploads/2020/05/mail.png" alt = "email" />
+                                <img src="https://api.abk-store.com/wp-content/uploads/2020/05/mail.png" />
                                 <p>abk.contactus@gmail.com</p>
                                 </a>
                             </li>
                             <li>
                                 <a href ="tel:0895937868" >
-                                <img src="https://api.abk-store.com/wp-content/uploads/2020/05/79dbd38bce56b49fdc7a04d3b01dee41.png" alt ="tel" />
+                                <img src="https://api.abk-store.com/wp-content/uploads/2020/05/79dbd38bce56b49fdc7a04d3b01dee41.png" />
                                 <p>08-959-37868</p>
                                 </a>
                             </li>

@@ -38,7 +38,7 @@ const ModalSty = styled.div`
                 /* display:inline-block; */
                 img{
                     margin: 5px 10px;
-                    width:15%;
+                    width:50px;
                 }
                 a{
                     list-style:none;

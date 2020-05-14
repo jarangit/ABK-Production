@@ -74,7 +74,7 @@ const ModalOnClickSale = (props) => {
                         <ul>
                             <li>
                                 <a href = "https://line.me/R/ti/p/%40426ovedm" target="_blank" >
-                                <img src="httpห://api.abk-store.com/wp-content/uploads/2020/05/f7e8c32d420b6da05f807488ebf8a1e5.png" />
+                                <img src="https://api.abk-store.com/wp-content/uploads/2020/05/f7e8c32d420b6da05f807488ebf8a1e5.png" />
                                 <p>Line</p>
                                 </a>
                             </li>

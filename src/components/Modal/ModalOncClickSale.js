@@ -4,6 +4,7 @@ import styled from 'styled-components'
 const Img = styled.img`
         margin: 5px 10px;
         width:50px;
+        height : 50px;
 `
 const ModalSty = styled.div`
     position: fixed; /* Stay in place */

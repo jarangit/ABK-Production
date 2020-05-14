@@ -51,7 +51,7 @@ const BlogListHomepage = () => {
 //--------display------------
             return(
               <div>
-                <h1> My Custommer </h1>
+                <h1> ประวัติการจัดส่ง </h1>
                   <BlogGrid>
                       {ShowBlog()}
                   </BlogGrid>

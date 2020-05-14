@@ -62,7 +62,7 @@ const ProductListHomePage = () => {
 //-------------display----------------
             return(
                <Div>
-                 <h1> Products </h1>
+                 <h1> สินค้าของเรา </h1>
                  <ProductGrid> {ShowProduct()} </ProductGrid>
                </Div>
             )

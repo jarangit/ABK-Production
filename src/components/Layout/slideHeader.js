@@ -15,6 +15,7 @@ import { globalHistory } from "@reach/router"
 //------------------------------------------------------------
 const  SlideHeader =   (props) => {
     const pathName =  globalHistory.location.pathname
+    console.log(pathName)
     const {dataImgToSlide} =  props
 
      if ( dataImgToSlide != undefined){
@@ -26,7 +27,13 @@ const  SlideHeader =   (props) => {
     }else if(pathName === '/'){
       return(
         <div>
-          <img src= "https://api.abk-store.com/wp-content/uploads/2020/05/welding-2178127.png" width = "100%" alt='หหห'/>
+          <img src= "https://api.abk-store.com/wp-content/uploads/2020/05/welding-2178127.png" width = "100%" alt='banner'/>
+        </div>
+      )
+    }else if(pathName === '/category/custommer/'){
+      return(
+        <div>
+          <img src= "https://api.abk-store.com/wp-content/uploads/2020/05/sparks-383037.png" width = "100%" alt='banner'/>
         </div>
       )
     }else{

@@ -69,30 +69,30 @@ const ModalOnClickSale = (props) => {
                     <div >
                     <span onClick = {props.onClose}>x</span>
                         <h1>ติดต่อเรา</h1>
-                        <p>หากต้องสอบถามเพิ่มเกี่ยวกับสินค้าของเราหรือต้องการสั้งซื้อสินค้ากรูณาติดต่อช่องทาวต่อไปนี้คะ</p>
+                        <p>หากต้องสอบถามเพิ่มเกี่ยวกับสินค้าของเราหรือต้องการสั้งซื้อสินค้ากรุณาติดต่อช่องทางต่อไปนี้</p>
                     <div>
                         <ul>
                             <li>
                                 <a href = "https://line.me/R/ti/p/%40426ovedm" target="_blank" >
-                                <Img src="https://api.abk-store.com/wp-content/uploads/2020/05/f7e8c32d420b6da05f807488ebf8a1e5.png" />
-                                <p>Line</p>
+                                <Img src="https://api.abk-store.com/wp-content/uploads/2020/05/line.png" />
+                                <p>abk_contactus</p>
                                 </a>
                             </li>
                             <li>
                                 <a href = "https://www.facebook.com/Jaranservice" target="_blank">
-                                <Img src="https://api.abk-store.com/wp-content/uploads/2020/05/Facebook_Logo_2019.png" />
-                                <p>Facebook</p>
+                                <Img src="https://api.abk-store.com/wp-content/uploads/2020/05/Facebook.png" />
+                                <p>ABK เครื่องคั้นกะทิ</p>
                                </a>
                             </li>
                             <li>
                                 <a href="mailto: abk.contactus@gmail.com" >
-                                <Img src="https://api.abk-store.com/wp-content/uploads/2020/05/mail.png" />
+                                <Img src="https://api.abk-store.com/wp-content/uploads/2020/05/icon-mail.png" />
                                 <p>abk.contactus@gmail.com</p>
                                 </a>
                             </li>
                             <li>
                                 <a href ="tel:0895937868" >
-                                <Img src="https://api.abk-store.com/wp-content/uploads/2020/05/79dbd38bce56b49fdc7a04d3b01dee41.png" />
+                                <Img src="https://api.abk-store.com/wp-content/uploads/2020/05/tel.png" />
                                 <p>08-959-37868</p>
                                 </a>
                             </li>

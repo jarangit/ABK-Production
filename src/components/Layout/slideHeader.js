@@ -24,20 +24,20 @@ const  SlideHeader =   (props) => {
           <img src= {props.dataImgToSlide} width = "100%" alt='หหห' />
         </div>
       )
-    }else if(pathName === '/'){
+    }else if(pathName === '/' || ''){
       return(
         <div>
           <img src= "https://api.abk-store.com/wp-content/uploads/2020/05/welding-2178127.png" width = "100%" alt='banner'/>
         </div>
       )
-    }else if(pathName === '/category/custommer/'){
+    }else if(pathName === '/category/custommer' || '/category/custommer/'){
       return(
         <div>
           <img src= "https://api.abk-store.com/wp-content/uploads/2020/05/sparks-383037.png" width = "100%" alt='banner'/>
         </div>
       )
     }else{
-      return 'no banner'
+      return ''
     }
     
 }

@@ -43,7 +43,6 @@ const Block = styled.div`
 
 const BlogItemCatPage = (props) => {
     const {id, slug, featuredImage, title, excerpt,categories} = props.itemData
-    console.log(categories.nodes[0].slug)
     return (
             <Block>
                 <Link key={id} to = {decodeURI(categories.nodes[0].slug + '/' + slug)}> 

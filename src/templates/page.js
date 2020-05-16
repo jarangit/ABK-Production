@@ -25,7 +25,6 @@ const PageTemplate = (data) => {
                                 return urlTmg.mediaItemUrl
                 }
             }
-            console.log(ShowImg())
          
             const ShowBlogList = () => {
                 const pageId = data.pageContext.id

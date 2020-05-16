@@ -48,7 +48,7 @@ const Block = styled.div`
 export default (data) => {
     const {name, slug, posts,description,} = data.pageContext
     return (
-     <Layout>
+     <Layout slugCatPage = {slug}>
          <h1>{name}</h1>
          <p key={description} dangerouslySetInnerHTML={{__html: description}} />
                 <BlogListCatPage catItemData = {posts}/>

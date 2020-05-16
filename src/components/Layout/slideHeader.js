@@ -30,7 +30,7 @@ const  SlideHeader =   (props) => {
           <img src= "https://api.abk-store.com/wp-content/uploads/2020/05/welding-2178127.png" width = "100%" alt='banner'/>
         </div>
       )
-    }else if(pathName === '/category/custommer/' || ''){
+    }else if(props.slugCatPage === 'custommer'){
       return(
         <div>
           <img src= "https://api.abk-store.com/wp-content/uploads/2020/05/sparks-383037.png" width = "100%" alt='banner'/>

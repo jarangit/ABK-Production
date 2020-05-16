@@ -40,7 +40,6 @@ const FooterContactItem  =() => {
                     {props.wordPress.menus.nodes.map(edges => {
                         return(
                             edges.menuItems.nodes.map(items=> {
-                                console.log(items.url)
                                 return(
                                     <Blog>
                                         <a href ={items.url} target="_blank"> {items.label} </a>

@@ -15,7 +15,6 @@ import { globalHistory } from "@reach/router"
 //------------------------------------------------------------
 const  SlideHeader =   (props) => {
     const pathName =  globalHistory.location.pathname
-    console.log(pathName)
     const {dataImgToSlide} =  props
 
      if ( dataImgToSlide != undefined){
@@ -37,7 +36,7 @@ const  SlideHeader =   (props) => {
         </div>
       )
     }else{
-      return ''
+      return(<div></div>)
     }
     
 }

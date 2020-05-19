@@ -77,8 +77,16 @@ const ProductCatTemplate = (data) => {
             })
         )
     }
+
+    const SentPropsBanner = () => {
+        if(data.pageContext.image = null){
+            return ''
+        }else{
+            return data.pageContext
+        }
+    }
     return(
-        <Layout  dataImgProCatPage = {data.pageContext}>
+        <Layout  dataImgProCatPage = {SentPropsBanner()}>
                 <Div>
                     <NavProCatPage data = {data.pageContext} />
                      <p key={description} dangerouslySetInnerHTML={{__html: description}} />

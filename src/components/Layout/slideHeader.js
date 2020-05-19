@@ -7,8 +7,6 @@ const Container = styled.div`
     position: relative;
     text-align: center;
     color: white;
-    height: 500px;
-      overflow:hidden;
 `
 const TextCenter = styled.div`
   position: absolute;
@@ -23,20 +21,13 @@ const TextCenter = styled.div`
 //------------------------------------------------------------
 const  SlideHeader =   (props) => {
     const pathName =  globalHistory.location.pathname
-    const {dataImgToSlide, dataProCatPage} =  props
-    console.log(dataProCatPage)
-     if ( dataImgToSlide != undefined){
+    const {dataImgToSlide, slugCatPage} =  props
+    console.log(props.dataImgToSlide)
+     if ( dataImgToSlide != false && dataImgToSlide != undefined){
        return  (
         <Container>
           <img src= {dataImgToSlide.featuredImage.mediaItemUrl} width = "100%" alt='หหห' />
           <TextCenter> <h1>{dataImgToSlide.title}</h1> </TextCenter>
-        </Container>
-      )
-    }else if (dataProCatPage!= undefined){
-      return  (
-        <Container>
-          <img src= {dataProCatPage.image.mediaItemUrl} width = "100%" alt='หหห' />
-          <TextCenter> <h1>{dataProCatPage.name}</h1> </TextCenter>
         </Container>
       )
     }else if(pathName === '/'){
@@ -45,11 +36,11 @@ const  SlideHeader =   (props) => {
           <img src= "https://api.abk-store.com/wp-content/uploads/2020/05/welding-2178127.png" width = "100%" alt='banner'/>
         </div>
       )
-    }else if(props.slugCatPage === 'custommer'){
+    }else if(slugCatPage === 'custommer'){
       return(
         <Container>
           <img src= "https://api.abk-store.com/wp-content/uploads/2020/05/sparks-383037.png" width = "100%" alt='banner'/>
-          <TextCenter> <h1>ลูกค้าของเรา</h1> </TextCenter>
+          <TextCenter></TextCenter>
         </Container>
       )
     }else{

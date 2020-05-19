@@ -58,17 +58,8 @@ const Div = styled.div`
 `
 
 const ProductCatTemplate = (data) => {
-    const { name, products,slug, description } = data.pageContext
-    // const ShowImg = () => {
-    //     if(image === null){
-    //        return ''
-    //     }else{
-    //         return(
-    //             <BlockImg ><ImgBanner src ={image.mediaItemUrl} /></BlockImg>
-                
-    //         )
-    //     }
-    // } 
+    const { name, products,slug, description, image } = data.pageContext
+    console.log(data.pageContext)
 
     const ShowProduct = () => {
         return(
@@ -87,7 +78,7 @@ const ProductCatTemplate = (data) => {
         )
     }
     return(
-        <Layout>
+        <Layout  dataImgProCatPage = {data.pageContext}>
                 <Div>
                     <NavProCatPage data = {data.pageContext} />
                      <p key={description} dangerouslySetInnerHTML={{__html: description}} />

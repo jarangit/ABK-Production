@@ -1,27 +1,43 @@
 import React from 'react'
 import { globalHistory } from "@reach/router"
+import styled from 'styled-components'
 
 
-
-//--------------Style
-// const Slide1 = styled.img`
-//   background-size: cover;
-//   width:100%;
-//   height: auto;
-//   position: relative;
-// `
-
+const Container = styled.div`
+    position: relative;
+    text-align: center;
+    color: white;
+    height: 500px;
+      overflow:hidden;
+`
+const TextCenter = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  h1{
+    font-size: 5vw;
+  }
+`
 
 //------------------------------------------------------------
 const  SlideHeader =   (props) => {
     const pathName =  globalHistory.location.pathname
-    const {dataImgToSlide} =  props
-
+    const {dataImgToSlide, dataProCatPage} =  props
+    console.log(dataProCatPage)
      if ( dataImgToSlide != undefined){
        return  (
-        <div>
-          <img src= {props.dataImgToSlide} width = "100%" alt='หหห' />
-        </div>
+        <Container>
+          <img src= {dataImgToSlide.featuredImage.mediaItemUrl} width = "100%" alt='หหห' />
+          <TextCenter> <h1>{dataImgToSlide.title}</h1> </TextCenter>
+        </Container>
+      )
+    }else if (dataProCatPage!= undefined){
+      return  (
+        <Container>
+          <img src= {dataProCatPage.image.mediaItemUrl} width = "100%" alt='หหห' />
+          <TextCenter> <h1>{dataProCatPage.name}</h1> </TextCenter>
+        </Container>
       )
     }else if(pathName === '/'){
       return(
@@ -31,9 +47,10 @@ const  SlideHeader =   (props) => {
       )
     }else if(props.slugCatPage === 'custommer'){
       return(
-        <div>
+        <Container>
           <img src= "https://api.abk-store.com/wp-content/uploads/2020/05/sparks-383037.png" width = "100%" alt='banner'/>
-        </div>
+          <TextCenter> <h1>ลูกค้าของเรา</h1> </TextCenter>
+        </Container>
       )
     }else{
       return(<div></div>)

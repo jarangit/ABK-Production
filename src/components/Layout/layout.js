@@ -18,11 +18,15 @@ const LayoutWrapper = styled.div`
 `
 
 const Layout = (props) => {
-  console.log(props.slugCatPage)
+  const {dataImg, slugCatPage, dataImgProCatPage} = props
   return(
     <div>
       <MainMenu/>
-      <SlideHeader dataImgToSlide = {props.dataImg} slugCatPage = {props.slugCatPage} />
+      <SlideHeader 
+      dataImgToSlide = {dataImg} 
+      slugCatPage = {slugCatPage}
+      dataProCatPage = {dataImgProCatPage}
+      />
         <LayoutWrapper>
             {props.children}
         </LayoutWrapper>

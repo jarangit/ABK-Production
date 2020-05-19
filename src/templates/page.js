@@ -25,7 +25,7 @@ const PageTemplate = (data) => {
                         const ShowImg = () => {
                             const urlTmg = data.pageContext.featuredImage
                             if(urlTmg === null){
-                                return false
+                                return undefined
                             }else{
                                 return data.pageContext
                 }

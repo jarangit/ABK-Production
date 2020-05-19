@@ -5,7 +5,6 @@ import '../../lib/css/Layout.css'
 import '../../lib/fontawesome/css/all.css'
 import styled from 'styled-components'
 import SlideHeader from '../Layout/slideHeader'
-import { globalHistory } from "@reach/router"
 
 
 const LayoutWrapper = styled.div`
@@ -18,15 +17,15 @@ const LayoutWrapper = styled.div`
 `
 
 const Layout = (props) => {
-  const {dataImg, slugCatPage, dataImgProCatPage} = props
-  console.log(dataImgProCatPage)
+  const {dataImg, slugCatPage, dataProCatPage} = props
+  console.log(dataProCatPage)
   return(
     <div>
       <MainMenu/>
       <SlideHeader 
       dataImgToSlide = {dataImg} 
       slugCatPage = {slugCatPage}
-      dataProCatPage = {dataImgProCatPage}
+      dataProCatPage = {dataProCatPage}
       />
         <LayoutWrapper>
             {props.children}

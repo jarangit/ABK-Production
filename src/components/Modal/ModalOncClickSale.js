@@ -21,7 +21,7 @@ const ModalSty = styled.div`
     background-color: #fefefe;
     margin: auto;
     padding: 10px 50px;
-    width: 50%;
+    width: 40%;
     border-radius: 0.5rem;
     /* text-align:center; */
     h1{

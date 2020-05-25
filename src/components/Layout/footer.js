@@ -46,6 +46,19 @@ const FooterItem = styled.div`
         /* display:flex; */
     }
 `
+const BlogIcon = styled.div`
+    ul{
+        display:flex;
+        padding:0;
+        li{
+            list-style:none;
+            img{
+                width:35px;
+                margin: 0 5px;
+            }            
+        }
+    }
+`
 
 class Footer extends Component {
 
@@ -65,6 +78,30 @@ class Footer extends Component {
                             ปิด ⋅ เปิด 06:00 ส.
                             โทรศัพท์: 088 001 7988
                       </p>
+                      <BlogIcon>
+                      <ul>
+                            <li>
+                                <a href = "https://line.me/R/ti/p/%40426ovedm" target="_blank" >
+                                <img src="https://api.abk-store.com/wp-content/uploads/2020/05/line.png" />
+                                </a>
+                            </li>
+                            <li>
+                                <a href = "https://www.facebook.com/Jaranservice" target="_blank">
+                                <img src="https://api.abk-store.com/wp-content/uploads/2020/05/Facebook.png" />
+                               </a>
+                            </li>
+                            <li>
+                                <a href="mailto: abk.contactus@gmail.com" >
+                                <img src="https://api.abk-store.com/wp-content/uploads/2020/05/icon-mail.png" />
+                                </a>
+                            </li>
+                            <li>
+                                <a href ="tel:0895937868" >
+                                <img src="https://api.abk-store.com/wp-content/uploads/2020/05/tel.png" />
+                                </a>
+                            </li>
+                        </ul>
+                      </BlogIcon>
                   </div>
               </FooterItem>
                 <FooterCopy>

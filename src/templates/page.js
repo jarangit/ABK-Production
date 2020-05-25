@@ -12,7 +12,12 @@ import SlideHeader from '../components/Layout/slideHeader'
 const Block = styled.div`
     margin: 40px;
 `
-
+const TextCenter = styled.div`
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+`
 
 
 
@@ -20,9 +25,9 @@ const PageTemplate = (data) => {
                         const ShowImg = () => {
                             const urlTmg = data.pageContext.featuredImage
                             if(urlTmg === null){
-                                return false
+                                return undefined
                             }else{
-                                return urlTmg.mediaItemUrl
+                                return data.pageContext
                 }
             }
          
@@ -46,7 +51,7 @@ const PageTemplate = (data) => {
                             }
                         }
                         return(
-                            <Layout dataImg = {ShowImg()}>
+                            <Layout dataImg = {ShowImg()} titlePage = {data.pageContext.title} >
                                 <SEO title = {data.pageContext.title} />
                                 <Block>
                                 <NavPage data = {data.pageContext}/>

@@ -59,17 +59,6 @@ const Div = styled.div`
 
 const ProductCatTemplate = (data) => {
     const { name, products,slug, description } = data.pageContext
-    // const ShowImg = () => {
-    //     if(image === null){
-    //        return ''
-    //     }else{
-    //         return(
-    //             <BlockImg ><ImgBanner src ={image.mediaItemUrl} /></BlockImg>
-                
-    //         )
-    //     }
-    // } 
-
     const ShowProduct = () => {
         return(
             products.nodes.map(product=>{
@@ -86,8 +75,17 @@ const ProductCatTemplate = (data) => {
             })
         )
     }
+
+    const SentPropsBanner = () => {
+        const urlImg = data.pageContext.image
+        if(urlImg != null){
+            return  data.pageContext
+        }else{
+            return undefined
+        }
+    }
     return(
-        <Layout>
+        <Layout dataProCatPage = {SentPropsBanner()} >
                 <Div>
                     <NavProCatPage data = {data.pageContext} />
                      <p key={description} dangerouslySetInnerHTML={{__html: description}} />

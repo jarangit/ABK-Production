@@ -40,5 +40,4 @@ const  SlideHeader =   (props) => {
     }
     
 }
-
 export default SlideHeader;

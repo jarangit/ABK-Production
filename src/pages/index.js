@@ -6,7 +6,7 @@ import HomePage from "../components/home"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="จำหน่ายเครื่องคั้นกะทิครบวงจร" />
     <HomePage/>
   </Layout>
 )

@@ -19,17 +19,13 @@ const MenusItem = styled.div`
     width: 100%;
     padding: 0;
     height: auto; 
-    justify-content: space-between; 
+    justify-content: space-around; 
     background-color: #00181a;
+    @media all and  (max-width: 1200px){
+      justify-content: space-between;
+    }
     
 `
-const LayoutWrapper = styled.div`
-    width:1064px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 50% auto;
-`
-
 const UlMain = styled.ul`
   display:flex;
   flex-wrap:wrap;
@@ -89,9 +85,20 @@ const UlMain = styled.ul`
             }
           }                    
     }
+`
 
-    @media all and  (min-width: 375px){
-      
+const LinkService = styled.li`
+  a{
+    color: red;
+    padding: 5px;
+    border: solid 1px #f4c030;
+    background: #f4c030;
+    border-radius: 0.3em;
+    :hover{
+      color: #f4c030;
+      border: solid 1px red;
+    background: red;
+    }
     }
 `
  //--------EndStyle-------
@@ -130,9 +137,7 @@ class MainMenu extends Component {
 ` } render = { props => {
   const [ navOpen, setNavOpen ] = useState(false)
   return(
-   <div>
       <MenusItem>
-      <LayoutWrapper>
       <div>
         <Link to="/">
             <LogoImg src="https://api.abk-store.com/wp-content/uploads/2020/04/logo.png"/> 
@@ -162,13 +167,14 @@ class MainMenu extends Component {
                   </li>
                 )
                 })} 
+                <LinkService>
+                  <Link>
+                    <strong>บริการซ่อมเครื่อง </strong>
+                  </Link>
+                </LinkService>
           </UlMain>
       </div>
-      </LayoutWrapper>
     </MenusItem>
-    <div>
-    </div>
-   </div>
   )
 }} />
 )

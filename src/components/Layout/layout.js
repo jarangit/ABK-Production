@@ -18,7 +18,6 @@ const LayoutWrapper = styled.div`
 
 const Layout = (props) => {
   const {dataImg, slugCatPage, dataProCatPage} = props
-  console.log(dataProCatPage)
   return(
     <div>
       <MainMenu/>

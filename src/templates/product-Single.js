@@ -6,10 +6,6 @@ import NavProSingPage from '../components/Navigation/navprosingpage'
 import ModalOnClickSale from '../components/Modal/ModalOncClickSale'
 
 //-------------styled----------
-const LayoutWrapper = styled.div`
-    max-width:1064px;
-    margin: 0 auto;
-`
 const Img = styled.img`
     max-width: 325px;
     width: 100%;

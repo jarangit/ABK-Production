@@ -1,6 +1,7 @@
 import React, {Component, useState} from 'react'
 import { graphql, StaticQuery, Link } from 'gatsby'
 import styled from 'styled-components'
+import ModalOnClickSale from '../Modal/ModalOncClickSale'
 // import Logo from '../../images/logo/logo.png'
 
 
@@ -106,7 +107,29 @@ const LinkService = styled.li`
 
 
 class MainMenu extends Component {
+  constructor(props) {
+    super(props);
+  
+    this.state = {
+      openModal: true
+    };
+    this.navClose = this.navClose.bind(this);
+    this.navOpen = this.navOpen.bind(this);
+  }
+  navClose(e) {
+    e.stopPropagation();
+    this.setState({
+      openModal: true
+    });
+  }
+  
+  navOpen() {
+    this.setState({
+      openModal: false
+    });
+  }
   render(){
+    console.log(this.state.navStatus)
   return(
     <StaticQuery  query={ graphql`
     {
@@ -169,11 +192,12 @@ class MainMenu extends Component {
                 })} 
                 <LinkService>
                   <Link>
-                    <strong>บริการซ่อมเครื่อง </strong>
+                    <strong onClick = {this.navOpen} >บริการซ่อมเครื่อง </strong>
                   </Link>
                 </LinkService>
           </UlMain>
       </div>
+      <ModalOnClickSale valueClick = {this.state.openModal} onClose = {this.navClose}/>
     </MenusItem>
   )
 }} />

@@ -3,8 +3,8 @@ require("dotenv").config({
 })
 module.exports = {
   siteMetadata: {
-    title: `ABK-Store - เครื่องปอกมะพร้าวครบวงจร`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    title: `ABK-Store - เครื่องปอกมะพร้าวครบวงจร, เครื่องขูดมะพร้าว, เครื่องคั้นกะทิ, เครื่องกะเทาะเปลือกมะพร้าว`,
+    description: ` เครื่องปอกมะพร้าวครบวงจร, เครื่องขูดมะพร้าว, เครื่องคั้นกะทิ, เครื่องกะเทาะเปลือกมะพร้าว`,
     author: `@gatsbyjs`,
     images: `https://api.abk-store.com/wp-content/uploads/2020/04/logo.png`,
   },
